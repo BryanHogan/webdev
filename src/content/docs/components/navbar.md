@@ -3,8 +3,7 @@ title: Example Guide
 description: A guide in my new Starlight docs site.
 banner:
   content: |
-    We just launched something cool!
-    <a href="https://example.com">Check it out</a>
+    You can see it in action on <a href="https://tolearnkorean.com">ToLearnKorean.com</a>!
 ---
 
 
