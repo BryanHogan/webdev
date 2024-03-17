@@ -26,15 +26,17 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
-					label: 'Guides',
+					label: "Components",
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
+						{ label: "Intro", link: "components/intro/"},
+						{ label: "NavBar", link: "components/navbar/", badge: "new" },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: "Miscellaneous",
+					items: [
+						{ label: "About", link: "miscellaneous/about/", badge: { text: "draft", variant: "note" } }
+					]
 				},
 			],
 		}),

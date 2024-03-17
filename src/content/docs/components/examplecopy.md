@@ -1,9 +1,6 @@
 ---
 title: Example Guide
 description: A guide in my new Starlight docs site.
-sidebar:
-  # Uses the default variant matching your site’s accent color
-  badge: New
 banner:
   content: |
     We just launched something cool!
