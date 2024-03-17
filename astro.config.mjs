@@ -20,7 +20,10 @@ export default defineConfig({
 			},
 			editLink: {
 				baseUrl: 'https://github.com/bryanhogan/webdev/edit/master/',
-			  },
+			},
+			customCss: [
+				"./src/styles/custom.css",
+			],
 			sidebar: [
 				{
 					label: 'Guides',
