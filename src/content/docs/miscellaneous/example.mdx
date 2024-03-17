@@ -1,0 +1,54 @@
+---
+title: Example Reference
+description: A reference page in my new Starlight docs site.
+---
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+Reference pages are ideal for outlining how things work in terse and clear terms.
+Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+
+## Further reading
+
+- Read [Starlight Documentation](https://starlight.astro.build/guides/components/) about cool stuff I can do in MDX files. This also includes all the [icons](https://starlight.astro.build/guides/components/#icon).
+- I can also referene [something](#nice) here. Path name reference example look can be here check it `src/content/docs` thanks.
+
+:::note
+This is a note that also includes some code
+
+```sh
+npm create astro@latest -- --template starlight
+```
+
+:::
+
+
+```js
+// my-test-file.js
+console.log('Hello World!');
+```
+
+
+<Card title="Check this out">Interesting content you want to highlight.</Card>
+<CardGrid>
+  <Card title="Stars" icon="moon">
+    Sirius, Vega, Betelgeuse
+  </Card>
+  <Card title="Moons" icon="moon">
+    Io, Europa, Ganymede
+  </Card>
+  <Card title="Moons" icon="random">
+    Io, Europa, Ganymede
+  </Card>
+</CardGrid>
+
+Moreeee:
+<LinkCard
+  title="Customizing Starlight"
+  description="Learn how to make your Starlight site your own with custom styles, fonts, and more."
+  href="/guides/customization/"
+/>
+<CardGrid>
+  <LinkCard title="Authoring Markdown" href="/guides/authoring-content/" />
+  <LinkCard title="Components" href="/guides/components/" />
+</CardGrid>
+## Nice
