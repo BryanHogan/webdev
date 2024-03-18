@@ -35,7 +35,8 @@ export default defineConfig({
 				{
 					label: "Miscellaneous",
 					items: [
-						{ label: "About", link: "miscellaneous/about/", badge: { text: "draft", variant: "note" } }
+						{ label: "About", link: "miscellaneous/about/", badge: { text: "draft", variant: "note" } },
+						{ label: "Resources", link: "miscellaneous/resources/"}
 					]
 				},
 			],

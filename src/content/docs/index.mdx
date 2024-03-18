@@ -4,7 +4,7 @@ description: A collection of components to use for any web development project.
 editUrl: false
 tableOfContents: false
 hero:
-  tagline: Find a collection of components written in HTML & CSS to use for any web development project.
+  tagline: Find advice and a collection of components written in HTML & CSS to use for any web development project.
   image:
     file: ../../assets/Penguin-Web-Dev-Bryan-Hogan-Logo.svg
   actions:
@@ -12,20 +12,25 @@ hero:
       link: /components/intro/
       icon: right-arrow
       variant: primary
-    - text: Made by Bryan Hogan
+    - text: Started by Bryan Hogan
       link: https://bryanhogan.com
       icon: external
 ---
 
 import { Card, CardGrid, Icon } from '@astrojs/starlight/components';
 
-## Next steps
-
 <CardGrid>
-	<Card title="How To Make A Navigation Bar" icon="external">
-		See it here <a href="/components/navbar/">see here</a>.
+	<Card title="Navigation Bar CSS Only" icon="rocket">
+		See how to make a <a href="/components/navbar/">responsive navigation bar</a> with CSS only.
 	</Card>
-	<Card title="Bryan's Blog" icon="external">
-		I also got a blog over at <a href="https://bryanhogan.com">BryanHogan.com</a>.
+  <Card title="Bryan's Blog" icon="external">
+		I also got a blog over at <a href="https://bryanhogan.com" target="_blank">BryanHogan.com</a>.
+	</Card>
+	<Card title="Want A Website?" icon="star">
+    - I can make a website for you, <a href="https://bryanhogan.com/portfolio#contact" target="_blank">contact me here</a>.
+    - Want to make your own? Take a look at the <a href="/miscellaneous/resources/">resources</a> section. 
+	</Card>
+	<Card title="I Want To Hear From You" icon="puzzle">
+    Point of this website is to give spotlight to well made web components to use in various projects by collaborating with other developers. <a href="https://github.com/BryanHogan/webdev" target="_blank">Github is here</a>.
 	</Card>
 </CardGrid>

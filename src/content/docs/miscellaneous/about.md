@@ -1,11 +1,12 @@
 ---
 title: About
-description: About WebDev.BryanHogan.com.
+description: About WebDev.BryanHogan.com - A collection of hand-written web components.
 ---
 
-What is this page about?
+What is WebDev.BryanHogan.com about?
 
 ## About Web Dev Guidance
 
-- I wanted to make a page about nice components to use in various projects.
-- I recently used Astro a lot and carry over components from project to project. I want to give them their own page to make them even better.
+This page contains a collection of web components written in HTML & CSS for use in any project.
+
+I have been using AstroJS a lot recently and carry over components from one project to the next. I want to give them their own page, think about how they could be improved, help other web developers and also get feedback on how to make them even better.
