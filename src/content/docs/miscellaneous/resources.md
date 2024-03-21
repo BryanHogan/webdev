@@ -20,5 +20,11 @@ description: Helpful resources for experienced and novice web developers.
 ## Youtuber
 - [Kevin Powell](https://www.youtube.com/@KevinPowell)
 
+## Web Development Blog Post Advice
+- https://www.greatfrontend.com/blog/top-css-mistakes-made-by-front-end-engineers
+
+## Ressources
+- https://developer.mozilla.org/en-US/
+
 ## Somewhat Related
 - https://codestitch.app/complete-guide-to-freelancing
