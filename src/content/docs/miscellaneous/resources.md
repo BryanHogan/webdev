@@ -25,6 +25,7 @@ description: Helpful resources for experienced and novice web developers.
 
 ## Ressources
 - https://developer.mozilla.org/en-US/
+- https://www.w3schools.com/html/default.asp
 
 ## Somewhat Related
 - https://codestitch.app/complete-guide-to-freelancing
