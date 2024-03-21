@@ -17,10 +17,13 @@ description: Helpful resources for experienced and novice web developers.
 - https://app.daily.dev/
 - https://www.reddit.com/r/webdev/
 
+## Tools
+- https://validator.w3.org/
+
 ## Youtuber
 - [Kevin Powell](https://www.youtube.com/@KevinPowell)
 
-## Web Development Blog Post Advice
+## Web Development Advice (Blog Posts)
 - https://www.greatfrontend.com/blog/top-css-mistakes-made-by-front-end-engineers
 
 ## Ressources
