@@ -18,7 +18,7 @@ description: Helpful resources for experienced and novice web developers.
 - https://www.reddit.com/r/webdev/
 
 ## Tools
-- https://validator.w3.org/
+- https://validator.w3.org/ (also: https://www.w3.org/developers/tools/)
 
 ## Youtuber
 - [Kevin Powell](https://www.youtube.com/@KevinPowell)
