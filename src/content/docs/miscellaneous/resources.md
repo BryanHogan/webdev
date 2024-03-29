@@ -8,7 +8,6 @@ description: Helpful resources for experienced and novice web developers.
 - https://internetingishard.netlify.app/
 
 ## Collections of Components
-- https://ui.shadcn.com/
 - https://github.com/withastro/starlight/tree/main/packages/starlight/components
 - https://codestitch.app/app
 
