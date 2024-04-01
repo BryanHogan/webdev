@@ -26,10 +26,23 @@ export default defineConfig({
 			],
 			sidebar: [
 				{
+					label: "Beginner Help",
+					items: [
+						{ label: "Getting Started", link: "start/beginner-introduction/"},
+					]
+				},
+				{
 					label: "Components",
 					items: [
-						{ label: "Intro", link: "components/intro/"},
-						{ label: "NavBar", link: "components/navbar/", badge: "new" },
+						{ label: "Introduction", link: "components/introduction/"},
+						//{ label: "NavBar", link: "components/navbar/", badge: "new" },
+						{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "note" } },
+					],
+				},
+				{
+					label: "Astro Components",
+					items: [
+						{ label: "Introduction", link: "astro/introduction/", badge: { text: "wip", variant: "note" } },
 					],
 				},
 				{

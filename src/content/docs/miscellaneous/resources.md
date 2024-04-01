@@ -11,12 +11,6 @@ description: Helpful resources for experienced and novice web developers.
 - https://github.com/withastro/starlight/tree/main/packages/starlight/components
 - https://codestitch.app/app
 
-## Community Pages & Infotainment
-- https://news.ycombinator.com/
-- https://dev.to/
-- https://app.daily.dev/
-- https://www.reddit.com/r/webdev/
-
 ## Tools
 - https://validator.w3.org/ (also: https://www.w3.org/developers/tools/)
 
@@ -30,5 +24,11 @@ description: Helpful resources for experienced and novice web developers.
 - https://developer.mozilla.org/en-US/
 - https://www.w3schools.com/html/default.asp
 
-## Somewhat Related
+## Other
+
+### Somewhat Related
 - https://codestitch.app/complete-guide-to-freelancing
+
+### Community Pages & Infotainment
+- https://www.reddit.com/r/webdev/
+- https://news.ycombinator.com/
