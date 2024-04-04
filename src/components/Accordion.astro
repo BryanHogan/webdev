@@ -1,0 +1,53 @@
+---
+interface Props {
+    id: string;
+    icon?: string;
+}
+const { id, icon } = Astro.props;
+import { Icon } from '@astrojs/starlight/components';
+---
+
+<div class="accordion">
+    <input type="checkbox" name="collapse-checkbox" id={id}> <!-- Each id must be unique -->
+    <label for={id}>
+        <Icon name="right-caret" />
+        <span><slot name="top" /></span>
+    </label>
+    <div class="collapsable text-section">
+        <div>
+            <slot />
+        </div>
+    </div>
+</div>
+
+<style>
+    label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    label > svg {
+        transition: transform 100ms;
+        margin-right: 0.5rem;
+    }
+
+    .collapsable {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 150ms;
+    }
+    .collapsable > * {
+        overflow: hidden;
+    }
+
+    input[name="collapse-checkbox"] {
+        display: none;
+    }
+    input[name="collapse-checkbox"]:checked ~ .collapsable {
+        grid-template-rows: 1fr;
+    }
+    input[name="collapse-checkbox"]:checked ~ label svg {
+        transform: rotate(90deg);
+    }
+</style>

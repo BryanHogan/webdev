@@ -1,0 +1,101 @@
+---
+title: Accordion
+description: A collection of components made from HTML & CSS for any web development project.
+---
+import { Card } from '@astrojs/starlight/components';
+import Accordion from "../../../components/Accordion.astro";
+
+How to make an accordion element with CSS only and no JavaScript?
+
+## Accordion
+A accordion element is great for organizing content in a collapsible and expandable manner, allowing users to quickly find the information they need without being overwhelmed by too much content at once.  
+This page shows two code examples, one simple non-animated accordion and one that is animated. Both can be made without JavaScript.
+
+<Card title='Example'>
+    <Accordion id="id">
+        <p slot="top"><strong>Accordion Head</strong></p>
+        <p>That was a great click! 💪</p>
+    </Accordion>
+</Card>
+
+### Simple Accordion
+
+```html
+// .html
+<div class="accordion">
+    <input type="checkbox" name="collapse-checkbox" id="firstid" />
+    <label for="firstid">
+        <span>This is a nice text or title.</span>
+        <span class="caret-icon">&gt;</span>
+    </label>
+    <div class="collapsable">
+        <p>This text can be hidden.</p>
+    </div>
+</div>
+```
+
+```css
+// .css
+input[name="collapse-checkbox"] {
+    display: none;
+}
+label {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.collapsable {
+    height: 0px;
+    overflow: hidden;
+}
+input[name="collapse-checkbox"]:checked ~ .collapsable {
+    height: auto;
+}
+input[name="collapse-checkbox"]:checked ~ label .caret-icon {
+    transform: rotate(90deg);
+}
+span {
+    margin-right: 1rem;
+}
+```
+
+### Animated Accordion
+To make the accordion animated we need add a transform, but there's a problem. Transition does not work on the height property when we go from 0 to auto. So what can we do?
+
+We start by making the container a grid element and defining `grid-template-rows` as 0fr. Then we define `grid-template-rows` as 1fr on checked and transition this instead. We move over the overflow: hidden to the child element. Finally we add the transition property to the collapsable element and icon, that's it.
+
+```css
+// .css
+input[name="collapse-checkbox"] {
+  display: none;
+}
+label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.caret-icon {
+  transition: transform 200ms;
+}
+.collapsable {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 250ms;
+}
+.collapsable > * {
+  overflow: hidden;
+}
+input[name="collapse-checkbox"]:checked ~ .collapsable {
+  grid-template-rows: 1fr;
+}
+input[name="collapse-checkbox"]:checked ~ label .caret-icon {
+  transform: rotate(90deg);
+}
+span {
+  margin-right: 1rem;
+}
+```
+
+Now you should have all the skills to build your own accordion element and style it to your liking. To make it look exactly like the example above replace the text caret with a svg image and then swap the two lines, placing the icon before the text. Add a bit of `margin-right` to the svg icon and it's done.

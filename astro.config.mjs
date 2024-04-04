@@ -36,6 +36,7 @@ export default defineConfig({
 					items: [
 						{ label: "Introduction", link: "components/introduction/"},
 						//{ label: "NavBar", link: "components/navbar/", badge: "new" },
+						{ label: "Accordion", link: "components/accordion/", badge: "new" },
 						{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "note" } },
 					],
 				},
