@@ -18,8 +18,20 @@ This page shows two code examples, one simple non-animated accordion and one tha
     </Accordion>
 </Card>
 
-### Simple Accordion
+### The Most Simple Accordion
+The easiest way to build an accordion is by using the `details` and `summary` element. This allows us to build a very simple and functional accordion instantly without any CSS or JavaScript.
 
+```html
+// .html
+<details>
+  <summary>Section 1</summary>
+  <p>This is the content of Section 1. You can put any HTML elements here.</p>
+</details>
+```
+
+Control over it's styling and behaviour is limited though. By using `input` and `label` instead we can build an accordion over which we have much more control as shown below.
+
+### Simple Accordion
 ```html
 // .html
 <div class="accordion">
