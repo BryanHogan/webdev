@@ -25,25 +25,42 @@ export default defineConfig({
 				"./src/styles/custom.css",
 			],
 			sidebar: [
+				{ label: "Introduction 👋", link: "/introduction/", badge: { text: "wip", variant: "note" } },
 				{
-					label: "Beginner Help",
+					label: "For Beginner Devs",
 					items: [
 						{ label: "Getting Started", link: "start/beginner-introduction/"},
 					]
 				},
 				{
-					label: "Components",
+					label: "Components 🧩",
 					items: [
-						{ label: "Introduction", link: "components/introduction/"},
+						{ label: "Components", link: "components/introduction/"},
 						//{ label: "NavBar", link: "components/navbar/", badge: "new" },
 						{ label: "Accordion", link: "components/accordion/", badge: "new" },
 						{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "note" } },
+						{ label: "Table", link: "components/table/", badge: { text: "wip", variant: "note" } },
+						{ label: "Blockquote", link: "components/blockquote/", badge: { text: "wip", variant: "note" } },
+					],
+				},
+				{
+					label: "Visual Design & UX ✨",
+					items: [
+						{ label: "Laws Of UI", link: "visualdesign/ui-laws/", badge: { text: "wip", variant: "note" } },
+						{ label: "Picking Colors", link: "visualdesign/colors/", badge: { text: "wip", variant: "note" } },
+					],
+				},
+				{
+					label: "CSS 🎨",
+					items: [
+						{ label: "CSS Reset", link: "css/css-reset/", badge: { text: "wip", variant: "note" } },
+						{ label: "Spacing", link: "css/spacing/", badge: { text: "wip", variant: "note" } },
 					],
 				},
 				{
 					label: "Astro Components",
 					items: [
-						{ label: "Introduction", link: "astro/introduction/", badge: { text: "wip", variant: "note" } },
+						{ label: "Astro Components", link: "astro/introduction/", badge: { text: "wip", variant: "note" } },
 					],
 				},
 				{

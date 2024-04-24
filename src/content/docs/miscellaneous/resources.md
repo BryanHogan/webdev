@@ -4,39 +4,40 @@ description: Helpful resources for experienced and novice web developers.
 ---
 
 
-## Starting As A Beginner
+### Starting As A Beginner
 
 - https://internetingishard.netlify.app/
 
-## Collections of Components
+  
+### Collections of Components
 
 - https://github.com/withastro/starlight/tree/main/packages/starlight/components
 - https://codestitch.app/app
 
-## Tools
+### Tools
 
-- https://validator.w3.org/ (also: https://www.w3.org/developers/tools/)
+- https://validator.w3.org/ (also: https://www.w3.org/developers/tools/) - Validate your HTML.
 
-## Youtuber
+### Youtuber
 
 - [Kevin Powell](https://www.youtube.com/@KevinPowell)
 
-## Web Development Advice (Blog Posts)
+### Web Development Advice (Blog Posts)
 
 - https://www.greatfrontend.com/blog/top-css-mistakes-made-by-front-end-engineers
 
-## Ressources
+### Ressources
 
 - https://developer.mozilla.org/en-US/
 - https://www.w3schools.com/html/default.asp
 
-## Other
+### Other
 
-### Somewhat Related
+**Freelancing**
 
 - https://codestitch.app/complete-guide-to-freelancing
 
-### Community Pages & Infotainment
+**Community Pages & Infotainment**
 
 - https://www.reddit.com/r/webdev/
 - https://news.ycombinator.com/
