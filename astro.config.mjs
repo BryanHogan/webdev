@@ -58,6 +58,12 @@ export default defineConfig({
 					],
 				},
 				{
+					label: "SEO 🔍",
+					items: [
+						{ label: "SEO", link: "seo/introduction/", badge: { text: "wip", variant: "note" } }
+					],
+				},
+				{
 					label: "Astro Components",
 					items: [
 						{ label: "Astro Components", link: "astro/introduction/", badge: { text: "wip", variant: "note" } },
