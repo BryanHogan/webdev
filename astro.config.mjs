@@ -25,7 +25,7 @@ export default defineConfig({
 				"./src/styles/custom.css",
 			],
 			sidebar: [
-				{ label: "Introduction 👋", link: "/introduction/", badge: { text: "wip", variant: "note" } },
+				{ label: "Introduction 👋", link: "/introduction/", badge: { text: "wip", variant: "caution" } },
 				{
 					label: "For Beginner Devs",
 					items: [
@@ -61,7 +61,7 @@ export default defineConfig({
 					label: "SEO 🔍",
 					items: [
 						{ label: "SEO", link: "seo/introduction/", badge: "new"},
-						{ label: "<Head>", link: "seo/head/", badge: { text: "new", variant: "caution" } }
+						{ label: "<Head>", link: "seo/head/", badge: "new" }
 					],
 				},
 				{
