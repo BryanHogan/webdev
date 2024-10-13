@@ -37,7 +37,7 @@ export default defineConfig({
 					items: [
 						{ label: "Components", link: "components/introduction/"},
 						//{ label: "NavBar", link: "components/navbar/", badge: "new" },
-						{ label: "Accordion", link: "components/accordion/", badge: "new" },
+						{ label: "Accordion", link: "components/accordion/"},
 						{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "caution" } },
 						{ label: "Table", link: "components/table/", badge: { text: "wip", variant: "caution" } },
 						{ label: "Blockquote", link: "components/blockquote/", badge: { text: "wip", variant: "caution" } },
@@ -46,8 +46,8 @@ export default defineConfig({
 				{
 					label: "Visual Design & UX ✨",
 					items: [
-						{ label: "Laws Of UI", link: "visualdesign/ui-laws/", badge: { text: "wip", variant: "caution" } },
-						{ label: "Picking Colors", link: "visualdesign/colors/", badge: { text: "wip", variant: "caution" } },
+						{ label: "Laws Of UI", link: "visual-design/ui-laws/", badge: { text: "wip", variant: "caution" } },
+						{ label: "Picking Colors", link: "visual-design/colors/", badge: { text: "wip", variant: "caution" } },
 					],
 				},
 				{
@@ -61,7 +61,7 @@ export default defineConfig({
 					label: "SEO 🔍",
 					items: [
 						{ label: "SEO", link: "seo/introduction/", badge: "new"},
-						{ label: "<Head>", link: "seo/head/", badge: "new" }
+						{ label: "<Head>", link: "seo/head/"}
 					],
 				},
 				{
@@ -74,6 +74,7 @@ export default defineConfig({
 					label: "Miscellaneous",
 					items: [
 						{ label: "About", link: "miscellaneous/about/", badge: { text: "draft", variant: "caution" } },
+						{ label: "Styling Markdown", link: "miscellaneous/styling-markdown/", badge: "new"},
 						{ label: "Resources", link: "miscellaneous/resources/"}
 					]
 				},
