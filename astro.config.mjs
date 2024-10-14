@@ -65,12 +65,6 @@ export default defineConfig({
 					],
 				},
 				{
-					label: "Astro Components",
-					items: [
-						{ label: "Astro Components", link: "astro/introduction/", badge: { text: "wip", variant: "caution" } },
-					],
-				},
-				{
 					label: "Miscellaneous",
 					items: [
 						{ label: "About", link: "miscellaneous/about/", badge: { text: "draft", variant: "caution" } },
