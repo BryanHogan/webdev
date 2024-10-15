@@ -4,7 +4,7 @@ description: CSS to style your markdown.
 ---
 
 Writing blog posts in markdown is great. It's simple and fast.  
-Markdown is a simple way to write text using common symbols to add things like \*\***bold**\*\*, \**italics*\*, or lists.
+Markdown is a simple way to write text using common symbols to add things like \*\***bold**\*\*, \**italics*\*, or lists. [^1]
 
 Many webpages have their content written in markdown. The markdown content gets then transformed into HTML that is displayed on the website. But when you are building your own website you will also want to style that content, so how could that look like?
 
@@ -16,4 +16,81 @@ There are multiple ways you can approach styling your own markdown content.
 
 Because I'd like my written contents design to fit into the rest of the page I like to write my own styles. This is a bit of work though as we have to write styling for the various elements that markdown allows us to create.
 
-Part of your styling such as `<p>` and `<h1>` elements might already have styling defined in your main CSS file that you can continue to use. But markdown content can also include images, code blocks, quotes and more.
+Part of your styling such as `<p>` and `<h1>` elements might already have styling defined in your main CSS file that you can continue to use. But markdown content can also include **images**, **code blocks**, **quotes**, **tables** and more which we have to take care of.
+
+
+## Styling the different elements
+We want the content that gets brought in through markdown to match the already existing content of the website. Which means we want to already have defined CSS variables in the root and applied styling to elements such as the body for text. I have explained how CSS variables should be used here: [CSS Variables](/css/variables).
+
+Which means we already should have something similar to this:
+```css
+:root {
+    --variable-1: ...
+}
+
+body {
+    font-family: var(--__sl-font);
+    line-height: var(--sl-line-height);
+    color: var(--sl-color-text);
+    background-color: var(--sl-color-bg);
+}
+```
+This should take care of all `<p>` elements. 
+
+Now we also want to apply some style to the container of the markdown content and all its children.
+
+```css
+.markdown-container {
+    width: min(100% - 2rem, 700px);
+}
+.markdown-container > *:not(:first-child) {
+    margin-block-start: 1.5em;
+}
+```
+
+To space the elements I give all direct children of the container except for the first a margin-top of `1.5em`.
+
+This means the HTML will look something like this:
+```html
+<main>
+    <div class="markdown-container">
+        <slot /> <!-- //Markdown content iserted here -->
+    </div>
+</main>
+```
+
+Note: Both `main` and `article` are okay.
+
+
+### Headings `<h1>, <h2> ..`
+
+### Images `<img>`
+
+### Lists
+
+Ordered and unordered
+
+### Quote
+
+### Table
+
+### Code & Code Block
+
+- overflow-wrap: anywhere
+- font-family: mono font
+
+## Last words
+Text here
+
+<details>
+
+<summary>Sources & References</summary>
+
+- test
+- test 2
+
+
+</details>
+
+**Footnotes**
+[^1]: Markdown cheat sheet: https://www.markdownguide.org/cheat-sheet/

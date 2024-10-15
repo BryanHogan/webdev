@@ -36,11 +36,8 @@ export default defineConfig({
 					label: "Components 🧩",
 					items: [
 						{ label: "Components", link: "components/introduction/"},
-						//{ label: "NavBar", link: "components/navbar/", badge: "new" },
 						{ label: "Accordion", link: "components/accordion/"},
 						{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "caution" } },
-						{ label: "Table", link: "components/table/", badge: { text: "wip", variant: "caution" } },
-						{ label: "Blockquote", link: "components/blockquote/", badge: { text: "wip", variant: "caution" } },
 					],
 				},
 				{
@@ -54,6 +51,7 @@ export default defineConfig({
 					label: "CSS 🎨",
 					items: [
 						{ label: "CSS Reset", link: "css/css-reset/", badge: { text: "wip", variant: "caution" } },
+						{ label: "CSS Variables", link: "css/variables/", badge: { text: "wip", variant: "caution" } },
 						{ label: "Spacing", link: "css/spacing/", badge: { text: "wip", variant: "caution" } },
 					],
 				},
