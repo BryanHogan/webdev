@@ -20,22 +20,7 @@ Part of your styling such as `<p>` and `<h1>` elements might already have stylin
 
 
 ## Styling the different elements
-We want the content that gets brought in through markdown to match the already existing content of the website. Which means we want to already have defined CSS variables in the root and applied styling to elements such as the body for text. I have explained how CSS variables should be used here: [CSS Variables](/css/variables).
 
-Which means we already should have something similar to this:
-```css
-:root {
-    --variable-1: ...
-}
-
-body {
-    font-family: var(--__sl-font);
-    line-height: var(--sl-line-height);
-    color: var(--sl-color-text);
-    background-color: var(--sl-color-bg);
-}
-```
-This should take care of all `<p>` elements. 
 
 Now we also want to apply some style to the container of the markdown content and all its children.
 
@@ -60,6 +45,25 @@ This means the HTML will look something like this:
 ```
 
 Note: Both `main` and `article` are okay.
+
+### Parapgraph `<p>`
+We want the content that gets brought in through markdown to match the already existing content of the website. Which means we want to already have defined CSS variables in the root and applied styling to elements such as the body for text. I have explained how CSS variables should be used here: [CSS Variables](/css/variables).
+
+Which means we already should have something similar to this:
+
+```css
+:root {
+    --variable-1: ...
+}
+
+body {
+    font-family: var(--__sl-font);
+    line-height: var(--sl-line-height);
+    color: var(--sl-color-text);
+    background-color: var(--sl-color-bg);
+}
+```
+This should take care of all `<p>` elements without needing to further style them.
 
 
 ### Headings `<h1>, <h2> ..`
