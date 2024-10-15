@@ -20,9 +20,18 @@ Part of your styling such as `<p>` and `<h1>` elements might already have stylin
 
 
 ## Styling the different elements
+I will asume that the html should look something like this:
 
+```html
+<main>
+    <div class="markdown-container">
+        <slot /> <!-- //Markdown content iserted here -->
+    </div>
+</main>
+```
 
-Now we also want to apply some style to the container of the markdown content and all its children.
+*Note: Using `main` or `article` is okay.*  
+To this container we want to apply some styling as well as on all its children like this:
 
 ```css
 .markdown-container {
@@ -35,16 +44,11 @@ Now we also want to apply some style to the container of the markdown content an
 
 To space the elements I give all direct children of the container except for the first a margin-top of `1.5em`.
 
-This means the HTML will look something like this:
-```html
-<main>
-    <div class="markdown-container">
-        <slot /> <!-- //Markdown content iserted here -->
-    </div>
-</main>
-```
+The markdown-container will have a max width of `700px`, or smaller for mobile devices. The keyword `min` selects the smaller amount. You might also want to make the container into a flex-box or grid depending on how you want to control your layout.
 
-Note: Both `main` and `article` are okay.
+
+
+
 
 ### Parapgraph `<p>`
 We want the content that gets brought in through markdown to match the already existing content of the website. Which means we want to already have defined CSS variables in the root and applied styling to elements such as the body for text. I have explained how CSS variables should be used here: [CSS Variables](/css/variables).
@@ -57,22 +61,60 @@ Which means we already should have something similar to this:
 }
 
 body {
-    font-family: var(--__sl-font);
-    line-height: var(--sl-line-height);
-    color: var(--sl-color-text);
-    background-color: var(--sl-color-bg);
+    font-family: ui-sans-serif, "Source Sans Pro", "Helvetica", system-ui;
+    line-height: 1.75;
+    color: hsl(224, 20%, 97%);
+    background-color: hsl(216, 28%, 7%);
 }
 ```
-This should take care of all `<p>` elements without needing to further style them.
+This should take care of all `<p>` elements without needing to further style them excplicitly.
 
 
-### Headings `<h1>, <h2> ..`
+### Section Headings `<h1>, <h2> ..`
+Section headings are of major importance since they got used often and important for keeping an overview. !!!
 
-### Images `<img>`
+```css
+h1, h2, h3, h4, h5, h6 {
+    margin-block-start: 2em;
+    overflow-wrap: anywhere;
+}
+```
+
+You might also want to set a `line-height`, `font-weight` and `color` for your section heading elements.
+
+The `Font-size` for each section heading should also be set, it makes sense to do this in via CSS variables to make heading sizes uniform. If you are looking for specific font sizes to use check out [CSS variables](/css/variables).
+
+### Images `<img>` & `<picture>`
+
+```css
+img, picture {
+    object-fit: scale-down;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
+    margin-inline: auto;
+    display: block;
+}
+```
+
+`Object-fit: scale-down` makes sure we can always see the full picture. By setting `max-width` and `height` we ensure proper sizing of the image. `Border-radius` to set slightly rounded corners.
+
+If you are using a framework like Astro, to center the image you will want to add `margin-inline: auto` and `display: block` to center the image.
+
+---
 
 ### Lists
 
 Ordered and unordered
+
+```css
+ol, ul {
+
+}
+li {
+    overflow-wrap: anywhere;
+}
+```
 
 ### Quote
 
@@ -83,6 +125,15 @@ Ordered and unordered
 - overflow-wrap: anywhere
 - font-family: mono font
 
+### hr
+
+```css
+hr {
+    border: 0;
+    border-bottom: 1px solid var(--color-side-1);
+}
+```
+
 ## Last words
 Text here
 
@@ -90,7 +141,7 @@ Text here
 
 <summary>Sources & References</summary>
 
-- test
+- Best practices for section heading elements: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 - test 2
 
 
