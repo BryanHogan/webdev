@@ -25,7 +25,6 @@ export default defineConfig({
 				"./src/styles/custom.css",
 			],
 			sidebar: [
-				{ label: "Introduction 👋", link: "/introduction/", badge: { text: "wip", variant: "caution" } },
 				{
 					label: "For Beginner Devs",
 					items: [
