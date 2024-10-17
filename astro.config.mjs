@@ -30,6 +30,7 @@ export default defineConfig({
 					items: [
 						{ label: "Getting Started", link: "start/beginner-introduction/"},
 						{ label: "Ways To Build Web", link: "start/website-builders/"}
+						//{ label: "Checklist", link: "start/checklist/"}
 					]
 				},
 				{

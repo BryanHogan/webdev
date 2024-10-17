@@ -17,6 +17,8 @@ description: Helpful resources for experienced and novice web developers.
 ### Tools
 
 - https://validator.w3.org/ (also: https://www.w3.org/developers/tools/) - Validate your HTML.
+- https://technicalseo.com/tools/schema-markup-generator/ - Generate schema markup.
+- https://realfavicongenerator.net/ - Favicon generator.
 
 ### Youtuber
 
@@ -25,6 +27,7 @@ description: Helpful resources for experienced and novice web developers.
 ### Web Development Advice (Blog Posts)
 
 - https://www.greatfrontend.com/blog/top-css-mistakes-made-by-front-end-engineers
+- https://neilpatel.com/blog/get-started-using-schema/
 
 ### Ressources
 

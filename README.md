@@ -1,6 +1,5 @@
+Hey 👋 This guide is here to help web developers build beautiful, accessible, and fast websites.
 
-(wip)
+Built by [Bryan Hogan](https://bryanhogan.com/).
 
-Made using Starlight with Astro.
-- [Starlight Documentation](https://starlight.astro.build/getting-started/)
-
+Built using [Astro Starlight](https://starlight.astro.build/getting-started/).
