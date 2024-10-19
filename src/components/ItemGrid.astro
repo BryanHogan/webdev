@@ -1,0 +1,23 @@
+---
+interface Props {
+    id: string;
+    icon?: string;
+}
+---
+
+<ul class="grid-list not-content">
+    <slot />
+</ul>
+
+<style>
+    .grid-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+        gap: 1rem;
+    }
+    .grid-list :global(> *) {
+    }
+    ul {
+        list-style: none;
+    }
+</style>
