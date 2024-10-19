@@ -21,7 +21,6 @@ export default defineConfig({
 		editLink: {
 			baseUrl: 'https://github.com/bryanhogan/webdev/edit/master/',
 		},
-		site: 'https://webdev.bryanhogan.com',
 		customCss: [
 			"./src/styles/custom.css",
 		],
@@ -78,7 +77,7 @@ export default defineConfig({
 			  tag: 'script',
 			  attrs: {
 				src: 'https://cloud.umami.is/script.js',
-				'data-website-id': 'da96b3bd-cbcd-4411-b661-ac6a88d363eb',
+				'data-site': 'da96b3bd-cbcd-4411-b661-ac6a88d363eb',
 				defer: true,
 			  },
 			},
