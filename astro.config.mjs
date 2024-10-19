@@ -72,15 +72,24 @@ export default defineConfig({
 				]
 			},
 		],
+		favicon: '/favicon/favicon.svg',
 		head: [
 			{
-			  tag: 'script',
-			  attrs: {
-				src: 'https://cloud.umami.is/script.js',
-				'data-site': 'da96b3bd-cbcd-4411-b661-ac6a88d363eb',
-				defer: true,
-			  },
+				tag: 'script',
+				attrs: {
+					src: 'https://cloud.umami.is/script.js',
+					'data-site': 'da96b3bd-cbcd-4411-b661-ac6a88d363eb',
+					defer: true,
+				},
 			},
-		  ],
+			{
+				tag: 'link',
+				attrs: {
+					rel: 'icon',
+					href: '/favicon/favicon.ico',
+					sizes: '32x32',
+				},
+			},
+		],
 	}), sitemap()],
 });
