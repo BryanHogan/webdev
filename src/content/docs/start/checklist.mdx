@@ -4,8 +4,6 @@ description: Steps to follow to develop and launch your website, a checklist.
 ---
 import { Steps } from '@astrojs/starlight/components';
 
-**WIP**
-
 A checklist for you to go through for each website you build. ✅
 
 Relevant steps are explained in more detail throughout other sections of the site.
@@ -28,8 +26,11 @@ So what steps to follow to launch your website?
     This step will require the most amount of time.
 8. **Favicon.** Include a favicon, a favicon is the little icon you see at the top of your browser bar next to the title. It shows up on search results but also when you add a website to your phone homescreen.  
     I have seen [realfavicongenerator.net](https://realfavicongenerator.net/) recommended before to generate your favicons files. The explanation at [evilmartians.com about favicons](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) on why you'd need all this can also be helpful.
-9. Sitemap & Robots.txt
-10. Schema Markup - https://technicalseo.com/tools/schema-markup-generator/
+9. *Sitemap & Robots.txt.* In a sitemap you include information about your site, it helps search engines understand what they should show about your website. The Robots.txt tells search engines what parts of the website they have access to.
+10. **Include Schema.org markup.** Schema.org structured data provides additional information which search engines can use to provide additional information such as rich results.  
+    Can recommend this [writeup on using schema markup](https://neilpatel.com/blog/get-started-using-schema/) for using it for the first time.
+    Validate and test with [developers.google.com/search/docs/appearance/structured-data](https://developers.google.com/search/docs/appearance/structured-data).[^1]
+    https://technicalseo.com/tools/schema-markup-generator/ is helpful with generating Schema.org structured data.
 11. **Legal compliance.** Depending on your region you will have to add different kind of legal compliances such as information on how collected data is used, consent banner etc.
 12. **Get domain**. Namecheap and Porkbun both seem to work well as domain registrars to buy your domain from.
 13. **Host it.** Put online at host of preference. I use DigitalOcean, Cloudflare and Hetzner to host my websites.
@@ -49,11 +50,19 @@ So what steps to follow to launch your website?
 
 Download a markdown file with checkboxes for each step.
 
+
+
 <details>
 
 <summary>Sources & References</summary>
 
 - https://codestitch.app/complete-guide-to-freelancing & https://codestitch.app/web-design-resources & 
 - https://neilpatel.com/blog/get-started-using-schema/
+- On site maps: https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview
+- On robots.txt: https://developers.google.com/search/docs/crawling-indexing/robots/intro#:~:text=A%20robots.txt%20file%20tells,web%20page%20out%20of%20Google.
+- Schema.org structured meta data markup, https://validator.w3.org/ 
 
 </details>
+
+**Footnotes**
+[^1]: Can also consider using [validator.w3.org](https://validator.w3.org/) to validate your markup.
