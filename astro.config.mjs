@@ -29,8 +29,8 @@ export default defineConfig({
 					label: "For Beginner Devs",
 					items: [
 						{ label: "Getting Started", link: "start/beginner-introduction/"},
-						{ label: "Ways To Build Web", link: "start/ways-to-build/"}
-						//{ label: "Checklist", link: "start/checklist/"}
+						{ label: "Ways To Build Web", link: "start/ways-to-build/"},
+						{ label: "Step Checklist", link: "start/checklist/"}
 					]
 				},
 				{
