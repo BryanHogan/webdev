@@ -34,14 +34,6 @@ export default defineConfig({
 				]
 			},
 			{
-				label: "Components 🧩",
-				items: [
-					{ label: "Components", link: "components/introduction/" },
-					{ label: "Accordion", link: "components/accordion/" },
-					{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "caution" } },
-				],
-			},
-			{
 				label: "Visual Design & UX ✨",
 				items: [
 					{ label: "Building UI & UX", link: "visual-design/building-ui-ux/"},
@@ -61,6 +53,14 @@ export default defineConfig({
 				items: [
 					{ label: "SEO", link: "seo/introduction/", badge: "new" },
 					{ label: "<Head>", link: "seo/head/" }
+				],
+			},
+			{
+				label: "Components 🧩",
+				items: [
+					{ label: "Components", link: "components/introduction/" },
+					{ label: "Accordion", link: "components/accordion/" },
+					{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "caution" } },
 				],
 			},
 			{
