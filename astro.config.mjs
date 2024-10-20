@@ -44,7 +44,7 @@ export default defineConfig({
 			{
 				label: "Visual Design & UX ✨",
 				items: [
-					{ label: "Laws Of UI", link: "visual-design/ui-laws/"},
+					{ label: "Building UI & UX", link: "visual-design/building-ui-ux/"},
 					{ label: "Picking Colors", link: "visual-design/colors/", badge: { text: "wip", variant: "caution" } },
 				],
 			},
