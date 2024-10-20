@@ -1,49 +1,153 @@
 ---
 title: Resources
 description: Helpful resources for experienced and novice web developers.
+
+head:
+  - tag: style
+    content: ":root { --sl-content-width: 80% !important; }"
+  - tag: style
+    content: "h3 { text-align: left !important; }"
 ---
+import ItemGrid from "../../../components/ItemGrid.astro";
+import { LinkCard } from '@astrojs/starlight/components';
 
 ### Starting As A Beginner
 
-- https://internetingishard.netlify.app/
+<ItemGrid>
+    <LinkCard
+         title="Beginner tutorial into web development"
+         href="https://internetingishard.netlify.app/"
+         description="Learn about developing your first website using HTML and CSS."
+         target="_blank"
+    />
+</ItemGrid>
 
-  
 ### Collections of Components
 
-- https://github.com/withastro/starlight/tree/main/packages/starlight/components
-- https://codestitch.app/app
+<ItemGrid>
+    <LinkCard
+         title="Web components by Codestich"
+         href="https://codestitch.app/app"
+         description="A collection of web components. Code provided."
+         target="_blank"
+    />
+    <LinkCard
+         title="Components in the Starlight Github project"
+         href="https://github.com/withastro/starlight/tree/main/packages/starlight/components"
+         description="The Github repo of the Starlight project by the Astro team."
+         target="_blank"
+    />
+</ItemGrid>
 
 ### Tools
 
-- https://validator.w3.org/ (also: https://www.w3.org/developers/tools/) - Validate your HTML.
-- https://technicalseo.com/tools/schema-markup-generator/ - Generate schema markup.
-- https://realfavicongenerator.net/ - Favicon generator.
-- https://jakearchibald.github.io/svgomg/ - SVG optimizing.
+<ItemGrid>
+    <LinkCard
+         title="W3 Validator"
+         href="https://validator.w3.org/"
+         description="Validate your HTML."
+         target="_blank"
+    />
+    <LinkCard
+         title="Generate schema.org markup"
+         href="https://technicalseo.com/tools/schema-markup-generator/"
+         description="A tool to generate schema.org markup."
+         target="_blank"
+    />
+    <LinkCard
+         title="Favicon Generator"
+         href="https://realfavicongenerator.net/"
+         description="Provide an image and get all files needed for your favicon."
+         target="_blank"
+    />
+    <LinkCard
+         title="Optimize your SVGs"
+         href="https://jakearchibald.github.io/svgomg/"
+         description="Optimise your SVGs."
+         target="_blank"
+    />
+</ItemGrid>
 
 ### Youtuber
 
-- [Kevin Powell](https://www.youtube.com/@KevinPowell)
+<ItemGrid>
+    <LinkCard
+         title="Kevin Powell Youtube"
+         href="https://www.youtube.com/@KevinPowell"
+         description="Understand CSS."
+         target="_blank"
+    />
+</ItemGrid>
 
 ### Web Development Advice (Blog Posts)
 
-- https://www.greatfrontend.com/blog/top-css-mistakes-made-by-front-end-engineers
-- https://neilpatel.com/blog/get-started-using-schema/
+<ItemGrid>
+    <LinkCard
+         title="Common web dev mistakes"
+         href="https://www.greatfrontend.com/blog/top-css-mistakes-made-by-front-end-engineers"
+         description="Some common web development mistakes to avoid."
+         target="_blank"
+    />
+    <LinkCard
+         title="Understand schema.org markup"
+         href="https://neilpatel.com/blog/get-started-using-schema/"
+         description="Learn how to use schema.org markup for your website."
+         target="_blank"
+    />
+</ItemGrid>
 
 ### Ressources
 
-- https://developer.mozilla.org/en-US/
-- https://www.w3schools.com/html/default.asp
+<ItemGrid>
+    <LinkCard
+         title="MDN Docs"
+         href="https://developer.mozilla.org/en-US/"
+         description="The go-to documentation for web developers."
+         target="_blank"
+    />
+    <LinkCard
+         title="W3 Schools"
+         href="https://www.w3schools.com/html/default.asp"
+         description="Introduction into HTML things."
+         target="_blank"
+    />
+</ItemGrid>
+
+### Freelancing
+
+<ItemGrid>
+    <LinkCard
+         title="Full freelancing guide"
+         href="https://codestitch.app/complete-guide-to-freelancing"
+         description="Indepth guide to web freelancing."
+         target="_blank"
+    />
+</ItemGrid>
+
+### Community & Infotainment
+
+<ItemGrid>
+    <LinkCard
+         title="r/webdev Reddit"
+         href="https://www.reddit.com/r/webdev/"
+         description="Reddit forum dedicated to web development."
+         target="_blank"
+    />
+    <LinkCard
+         title="Hacker News"
+         href="https://news.ycombinator.com/"
+         description="Tech focussed community site. Not necessarily web development."
+         target="_blank"
+    />
+</ItemGrid>
 
 ### Other
 
-**Freelancing**
-
-- https://codestitch.app/complete-guide-to-freelancing
-
-**Community Pages & Infotainment**
-
-- https://www.reddit.com/r/webdev/
-- https://news.ycombinator.com/
-
-**Example Pages**
-- https://html5up.net/
+<ItemGrid>
+    <LinkCard
+         title="HTML5up example websites"
+         href="https://html5up.net/"
+         description="Example websites for you to copy."
+         target="_blank"
+    />
+</ItemGrid>
