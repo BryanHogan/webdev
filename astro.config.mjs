@@ -11,6 +11,7 @@ export default defineConfig({
 		logo: {
 			src: './src/assets/Penguin-Web-Dev-Bryan-Hogan-Logo.svg',
 		},
+		lastUpdated: true,
 		social: {
 			github: 'https://github.com/BryanHogan/webdev',
 			instagram: 'https://www.instagram.com/bryanhoganme/',
