@@ -2,11 +2,191 @@
 title: CSS Reset
 description: How a CSS reset should look like.
 ---
+import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-Do you need a reset.css file? WHat should yours look like?
+Do you need a reset.css file? What should yours look like?
 
 ## Why use reset.css
-Being built, work in progress.
+
+Historically the main goal of a CSS reset was to ensure consistency between browsers. But nowadays since the differences has drastically decreased we might want to keep some styling like `font-style: italic` for `<em>` elements.
 
 - https://github.com/withastro/starlight/blob/main/packages/starlight/style/reset.css
-- https://necolas.github.io/normalize.css/
+
+- https://youtu.be/cCAtD_BAHNw
+
+## reset.css examples
+
+Different variantians of a reset.css:
+
+<Tabs>
+<TabItem label="Josh W">
+
+This is the [`reset.css` Josh W Comeau uses](https://www.joshwcomeau.com/css/custom-css-reset/), included on his blog post are also explanations for his decisions.
+
+```css
+// reset.css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+```
+</TabItem>
+
+<TabItem label="Starlight">
+
+The [`reset.css` as used by the Starlight project](https://github.com/withastro/starlight/blob/main/packages/starlight/style/reset.css).
+
+```css
+// reset.css
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+html {
+	color-scheme: dark;
+	accent-color: var(--sl-color-accent);
+}
+
+html[data-theme='light'] {
+	color-scheme: light;
+}
+
+body {
+	font-family: var(--__sl-font);
+	line-height: var(--sl-line-height);
+	-webkit-font-smoothing: antialiased;
+	color: var(--sl-color-text);
+	background-color: var(--sl-color-bg);
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6, code {
+    overflow-wrap: anywhere;
+}
+
+code {
+	font-family: var(--__sl-font-mono);
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## The css reset I use
+
+```css
+// reset.css
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  color-scheme: dark;
+  accent-color: var(--color-main-accent);
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--main-font);
+  line-height: var(--font-line-height);
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-main-two);
+  background-color: var(--color-main-one);
+  min height thing
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+img {
+    font-style: italic;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6, code {
+    overflow-wrap: anywhere;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1 {
+    text-wrap: balance;
+}
+
+code {
+    font-family: var(--mono-font);
+}
+
+:has(:target) {
+        scroll-padding-top: var(--navbar-height)
+    }
+
+@media (prefers-reduced-motion: no-preferene) {
+    :has(:target) {
+        scroll-behavior: smooth;
+    }
+}
+
+- scroll-behavior: smooth;
+```
+
+
+
+
+
+
+
+
+- CSS reset tips by Kevin Powell focussed on newer css features: https://youtu.be/eWmDW4zEXt4 & https://youtu.be/cCAtD_BAHNw
