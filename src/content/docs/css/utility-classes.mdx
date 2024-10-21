@@ -1,0 +1,65 @@
+---
+title: CSS Utility Classes
+description: Simple CSS utility classes for common uses.
+---
+import { Aside } from '@astrojs/starlight/components';
+
+wip
+
+## What are CSS utility classes?
+
+CSS utility classes are like presets that you can apply to your HTML elements.
+
+For example this could be the CSS for a flex container that aligns its items to the middle. So that we don't have to repeat this code multiple times we define a `.flex-container-center` one time in our .css file and now we can apply it whenever needed.
+
+<Aside>How much you style through utility classes like this depends on you. There are CSS frameworks like Tailwindcss that take this to the next level and make you do the whole styling through just using utility classes.</Aside>
+
+## CSS utility classes collection
+
+This is a collection of CSS utility classes I like to frequently use:
+
+```css
+//utility.css
+
+.height-smart-fill-screen {
+    min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
+}
+
+.text-content > *:not(:first-child){
+    margin-block-start: 1.5em;
+}
+
+.visually-hidden {
+    position: absolute;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.margin-inline-auto {
+    margin-inline: auto;
+}
+
+.smart-container-width {
+    width: min(100% - (var(--side-gap-padding-m) * 2), var(--max-width-smart-container));
+}
+
+.main-header-element {
+    padding-top: max(8svh, var(--navbar-height) + 2rem);
+}
+
+.side-gap-padding {
+    padding-inline: var(--side-gap-padding-m);
+}
+
+```
+
+- fill screen: min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
+- text max width (apply variable selected)
+- smart max width using min
+- visually hidden / screen reader only: https://youtu.be/fyuao3G-2qg?t=256
