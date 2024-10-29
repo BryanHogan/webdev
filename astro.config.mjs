@@ -73,7 +73,7 @@ export default defineConfig({
 				]
 			},
 		],
-		favicon: '/favicon/favicon.svg',
+		favicon: "/favicon/favicon.svg",
 		head: [
 			{
 				tag: 'script',
