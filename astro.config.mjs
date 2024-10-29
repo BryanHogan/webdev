@@ -44,7 +44,7 @@ export default defineConfig({
 			{
 				label: "CSS 🎨",
 				items: [
-					{ label: "CSS Reset", link: "css/css-reset/", badge: { text: "wip", variant: "caution" } },
+					{ label: "CSS Reset", link: "css/css-reset/"},
 					{ label: "CSS Variables", link: "css/variables/", badge: { text: "wip", variant: "caution" } },
 					{ label: "Spacing", link: "css/spacing/", badge: { text: "wip", variant: "caution" } },
 				],
