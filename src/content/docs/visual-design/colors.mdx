@@ -43,15 +43,6 @@ Another way to find complementary  colors is by using palette generators. I use 
 
 Just like for the color wheel, these can be helpful for finding general directions of color you could use when you need to select accents colors.
 
-### Accessibility
-
-Of major importance regarding colors is accessibility. The colors you use should improve the usability of your website, not hinder it. Make sure that your elements have strong enough contrast. Be aware that your users might have totally different screens compared to you, your users might also have some visual impairment or color blindness. Regardless of these conditions, your website should work well for these groups.
-
-Test your colors contrast ratio by using something like [siegemedia's contrast ratio rool](https://www.siegemedia.com/contrast-ratio). Aim for a score of at least 7+.  
-You can also check by looking at your visual design in greyscale.  
-Also test your website with the browsers built in lighthouse test. 
-
-<span hidden>
 ### Building the full palette
 
 - how to find color for each step?`Find middle, keep finding middle between two colors
@@ -62,9 +53,44 @@ Also test your website with the browsers built in lighthouse test.
 
 - Example shows: Ensure stronger contract by choosing the opposite side always
 - Unsure small steps by swapping to the less contrasting color, ensure design has some effect regardless of dark or light mode
-</span>
 
-### Further Accents
+How do you build a complete palette now?
+
+The minimum amount of colors you will want should something like this:
+
+![Using color wheel to select accents example](../../../assets/images/Color-Palette-Minimum.png)
+
+Since we already have defined our base colors we now want to find the colors that lie between them.  
+One simple way to do is, is to just look for the color in the middle.
+
+For our neutral colors this would be first finding `500`. Do this by selecting the color that sits right in the middle of these two.  
+Then for `700` select the middle between `900` and `500`.  
+You can continue this until you have all steps of 200 units, or do 100 units if you want finer control.
+
+For our accent color we can do something similar. Look for the middle between the respective neutral color and the base accent color, start from there and continue like above.
+
+How do you apply these colors?
+
+The accent at `500` is our base accent, this one should always have the highest contrast and stand out the most.  
+If we now need an accent that is less strong we can now go into the respective neutral color's direction.
+
+In a mainly dark based design we would go into the left direction, using a higher number.  
+In a light based color schema we would go into the right direction, using a lower number.  
+By doing this we have colors that are less contrasting and stand out less. 
+
+![Using color wheel to select accents example](../../../assets/images/Color-Palette-Example.png)
+
+Regardless if we use light or dark mode, the effect we achieve through the colors stays the same.
+
+### Accessibility
+
+Of major importance regarding colors is accessibility. The colors you use should improve the usability of your website, not hinder it. Make sure that your elements have strong enough contrast. Be aware that your users might have totally different screens compared to you, your users might also have some visual impairment or color blindness. Regardless of these conditions, your website should work well for these groups.
+
+Test your colors contrast ratio by using something like [siegemedia's contrast ratio rool](https://www.siegemedia.com/contrast-ratio). Aim for a score of at least 7+.  
+You can also check by looking at your visual design in greyscale.  
+Also test your website with the browsers built in lighthouse test. 
+
+---
 
 <details>
 
