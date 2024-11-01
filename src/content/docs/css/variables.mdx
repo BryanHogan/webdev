@@ -1,34 +1,13 @@
 ---
 title: CSS Variables
-description: A reference page in my new Starlight docs site.
+description: Which CSS variables you should use for every project.
 ---
 
-wip
-
-- colors (primary: black, secondary: white, tertiary: main accent)
-    - main
-    - neutral
-    - shades, greyscales
-    - accents
-
-- color accent 500: accent
-- color neutral 900: black
-- color neutral 100: white
-
-- color accent b
-- color accent c
-
-- layout
-    - spacing
-    - mobile gap to screen end
-    - major element sizes (navbar, footer)
-- sizes buttons (use layout spacing variables)
-- shadows
-- borders (radius, size)
-- fonts
+Which CSS variables should you use for each project?
 
 ```css
 :root {
+    
 /* Color */
     --color-neutral-900: #212934;
     --color-neutral-700: #4D545D;
@@ -114,6 +93,18 @@ wip
     --opacity-m: 0.5;
     --opacity-l: 0.7;
 }
+```
+
+For example we can use these variables to style our section heading elements or the overall body like this:
+
+```css
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--font-line-height);
+    background-color: var(--color-neutral-900);
+    color: var(--color-neutral-100);
+}
 
 h1 {font-size: var(--text-size-4xl);}
 h2 {font-size: var(--text-size-3xl);}
@@ -128,14 +119,11 @@ h4 {font-size: var(--text-size-xl);}
 }
 ```
 
-- breakpoints
+## Multi color themes
 
+Now the snippet only needs a few adjustments to also allow us to swap between different color profiles like light and dark mode.
 
-- var(--side-gap-padding) = 1rem;
-
-
-## Applying
-- body: 
+(wip)
 
 ## Breakpoint variables via PostCSS plugin
 One great way to enhance CSS without changing anything about how you write CSS is by using the PostCSS plugin. I use its `postcss-preset-env` plugin in every project of mine. This package includes the `custom-media-queries` plugin.
@@ -152,11 +140,16 @@ With this plugin we can define a breakpoint and use it in our media queries:
 @media (--viewport-m) { }
 ```
 
+---
 
-- p, li, figcatpion: max-width: 70ch;
+<details>
+
+<summary>Sources & References</summary>
 
 - On media queries:
     - Kevin Powell on respinsive web design: https://youtu.be/x4u1yp3Msao
     - Kevin Powell on using media queries and container queries: https://youtu.be/2rlWBZ17Wes
     - MDN docs on media queries: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
-- 
+    - CSS variables as used in the Starlight project on Github: https://github.com/withastro/starlight/blob/main/packages/starlight/style/props.css
+
+</details>
