@@ -11,7 +11,7 @@ Included on every page should be:
 - **Title**. The title should be 30 - 60 characters long for SEO optimization.
 - **Description**. The description should be 50 - 160 characters long for SEO optimization.
 - **Viewport and Charset**. Viewport refers to the window width. Charset defines which characters the browser can expect. There's not much reason to change these so just use: `<meta name="viewport" content="width=device-width,initial-scale=1">` & `<meta charset="utf-8">`
-- **Favicon**. The icon of your webpage. There's a [guide by EvilMartians](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) on how to optimize your favicon for legacy browsers but just using a simple svg is also okay for most use cases.
+- **Favicon**. The icon of your webpage. There's a [guide by EvilMartians](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) on how to optimize your favicon for legacy browsers but just using a simple .svg with a .fav fallback is enough nowadays.
 - **Robots**. Define which pages should be indexed by search engines or not. This way you can exclude pages which you might not want to show up on Google searches. It is best practice to also include the sitemap in your robots.txt file. The sitemap is a list of all the pages on your website.
 - **Open Graph**. In addition to other meta tags you have the [Open Graph protocol](https://ogp.me/) which has been established by Facebook. It includes information such as which image to use for the social preview image, for example when a link is shared within a post on a social media site.
 
@@ -21,6 +21,8 @@ Optionally you might want to include:
 - **Canonical**. When you have multiple pages with the same content you will want to define which on of these is the canonical page. The canonical page is the one that will show up in search results.
 
 Included in the head are also links to the stylesheets and script files, if they exist.
+
+Also will want stylesheet and script files.
 
 ## `<head>` Code Example
 
@@ -35,6 +37,7 @@ Example of the code for a possible head:
     <title>Blog Title, 30 - 60 characters</title>
     <meta name="description" content="Description which should be between 50 - 160 characters." />
     
+
     <link rel="icon" type="image/png" href="/images/favicon.svg" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="canonical" href="https://www.example.com/the-canonical-adress">
@@ -42,8 +45,8 @@ Example of the code for a possible head:
     <meta name="author" content="Author name" />
     <meta name="copyright" content="Copyright owner" />
 
-    <meta property="og:title" content="Blog Title, 30 - 60 characters" />
-    <meta property="og:description" content="Description which should be between 50 - 160 characters." />
+    <meta property="og:title" content="Blog Title, can be longer than the other title" />
+    <meta property="og:description" content="Description which can get shown when shared on social media platforms." />
     <meta property="og:image" content="/images/my-awesome-image.png" />
     <meta property="og:image:alt" content="The alt attribute should describe the image in situations where the image can't be seen" />
     <meta property="og:image:type" content="image/png" />
