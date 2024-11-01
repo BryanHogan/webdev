@@ -29,7 +29,7 @@ wip
 
 ```css
 :root {
-    /* Color */
+/* Color */
     --color-neutral-900: #212934;
     --color-neutral-700: #4D545D;
     --color-neutral-500: #8E9399;
@@ -45,21 +45,86 @@ wip
     --color-accent-red-100: #DBABAC;
     
 /* Typography */
-
     --font-family: ui-sans-serif, "Helvetica Neue", Arial;
-    --font-mono; ui-monospace, Menlo, monospace;
+    --font-mono: ui-monospace, Menlo, monospace;
+
+    --font-size-small: 0.875rem;
+    --font-size-base: 16px; /* or 18px*/
+    --font-size-large: 1.25rem;
+
+
+    --text-size-6xl: 4rem;
+    --text-size-5xl: 2.75rem; /* desktop h1*/
+    --text-size-4xl: 2.25rem; /* mobile h1; desktop h2 */
+    --text-size-3xl: 1.75rem; /* mobile h2 */
+    --text-size-2xl: 1.5rem;
+    --text-size-xl: 1.25rem;
 
     --font-weight-light: 300;
     --font-weight-regular: 400;
-    --font-weight-semi-bold: 700;
+    --font-weight-semi-bold: 600;
     --font-weight-bold: 700;
 
-/* Spacing */
-/* Border */
-/* Shadows */
-/* Transitions */
-/* Breakpoints */
+    --font-line-height: 1.5;
+    --font-line-height-heading: 1.2;
 
+/* Spacing */
+    --space-xss: 0.375rem;
+    --space-xs: 0.5rem;
+    --space-s: 0.75rem;
+    --space-m: 1.25rem;
+    --space-l: 2rem;
+    --space-xl: 3.25rem;
+    --space-2xl: 5.25rem;
+    --space-3xl: 8.5rem;
+
+/* Border */
+    --border-radius-s: 4px;
+    --border-radius-m: 8px;
+    --border-radius-l: 16px;
+
+    --border-width-s: 1px;
+    --border-width-m: 2px;
+    --border-width-l: 4px;
+
+/* Shadows */
+    --text-shadow-s: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --text-shadow-m: 0 4px 4px rgba(0, 0, 0, 0.15);
+    --text-shadow-l: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+    --box-shadow-s: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+    --box-shadow-m: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    --box-shadow-l: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+
+/* Transitions */
+    --transition-normal: 0.2s ease;
+
+    /* consider adding animation var if needed */
+
+/* Breakpoints */
+    --breakpoint-m: 48rem; /* If using PostCSS (Or SASS or SCSS) */
+
+/* Other */
+    --navbar-height: 3.5rem;
+    --footer-height: 8rem;
+    --side-gap-padding: var(--space-s);
+    --max-width-smart-container: 45rem;
+
+    --opacity-s: 0.3;
+    --opacity-m: 0.5;
+    --opacity-l: 0.7;
+}
+
+h1 {font-size: var(--text-size-4xl);}
+h2 {font-size: var(--text-size-3xl);}
+h3 {font-size: var(--text-size-2xl);}
+h4 {font-size: var(--text-size-xl);}
+
+@media (min-width: 48rem) {
+    h1 {font-size: var(--text-size-5xl);}
+    h2 {font-size: var(--text-size-4xl);}
+    h3 {font-size: var(--text-size-3xl);}
+    h4 {font-size: var(--text-size-2xl);}
 }
 ```
 
@@ -72,8 +137,26 @@ wip
 ## Applying
 - body: 
 
+## Breakpoint variables via PostCSS plugin
+One great way to enhance CSS without changing anything about how you write CSS is by using the PostCSS plugin. I use its `postcss-preset-env` plugin in every project of mine. This package includes the `custom-media-queries` plugin.
+
+With this plugin we can define a breakpoint and use it in our media queries:
+
+```css
+@custom-media --viewport-m (min-width: 48rem);
+:root {
+    --breakpoint-m: 48rem;
+}
+
+/* Which allows us to:*/
+@media (--viewport-m) { }
+```
 
 
 - p, li, figcatpion: max-width: 70ch;
 
-- https://medium.com/@stefanmorris/proper-naming-of-color-variables-683264fec0f4
+- On media queries:
+    - Kevin Powell on respinsive web design: https://youtu.be/x4u1yp3Msao
+    - Kevin Powell on using media queries and container queries: https://youtu.be/2rlWBZ17Wes
+    - MDN docs on media queries: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
+- 
