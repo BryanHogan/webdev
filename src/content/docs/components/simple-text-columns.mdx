@@ -1,0 +1,25 @@
+---
+title: Simple text column component
+description: Simple text column component for your website built with HTML and CSS only.
+---
+
+
+
+```html
+<div class="column-container">
+    <p class="span-whole-column">This will be spread ontop of all three or less columns below.</p>
+    <p>Row one</p>
+    <p>Row two</p>
+    <p>Row three</p>
+</div>
+```
+```css
+.column-container {
+    columns: 200px 3;
+    column-rule: 1px solid grey;
+    gap: 3em;
+}
+.span-whole-column {
+    column-span: all;
+}
+```
