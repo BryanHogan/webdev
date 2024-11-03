@@ -22,6 +22,8 @@ Which CSS variables should you use for each project?
     --color-accent-red-900: #623238;
     --color-accent-red-500: #B13C3B;
     --color-accent-red-100: #DBABAC;
+
+ 
     
 /* Typography */
     --font-family: ui-sans-serif, "Helvetica Neue", Arial;
@@ -123,6 +125,22 @@ h4 {font-size: var(--text-size-xl);}
 }
 ```
 
+### Color variables
+
+Select colors as described on [this page](/visual-design/colors). Define them to reuse them when needed. This way we have a coherent design. And if needed we can change the colors at one place, this can be usuful when we want to have different color themes such as light and dark mode.
+
+### Typography variables
+
+### Spacing variables
+
+### Border variables
+
+### Shadow variables
+
+### Other variables
+- transition, animation
+- navbar height, footer height, opacity
+
 ## Multi color themes
 
 Now the snippet only needs a few adjustments to also allow us to swap between different color profiles like light and dark mode.
@@ -136,9 +154,6 @@ With this plugin we can define a breakpoint and use it in our media queries:
 
 ```css
 @custom-media --viewport-m (min-width: 48rem);
-:root {
-    --breakpoint-m: 48rem;
-}
 
 /* Which allows us to:*/
 @media (--viewport-m) { }
@@ -155,5 +170,6 @@ With this plugin we can define a breakpoint and use it in our media queries:
     - Kevin Powell on using media queries and container queries: https://youtu.be/2rlWBZ17Wes
     - MDN docs on media queries: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
     - CSS variables as used in the Starlight project on Github: https://github.com/withastro/starlight/blob/main/packages/starlight/style/props.css
+    - Kevin Powell example Astro blog project: https://youtu.be/Thudicbgqtg?t=1163
 
 </details>
