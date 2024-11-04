@@ -145,7 +145,7 @@ If you need to squeeze out some more loading speed you can [optimize your font](
 
 ### Spacing variables
 
-Define spacing sizes. We want to keep reusing these values. Elements of the same group will be placed closer together, while items of different groups have larger spacing. By defining values we can achieve a design that looks much cleaner and does not look for feel arnotrary.  
+Define spacing sizes. We want to keep reusing these values. Elements of the same group will be placed closer together, while items of different groups have larger spacing. By defining values we can achieve a design that looks much cleaner and does not look for feel arbitrary.  
 This 10 minute Youtube video on [rules for good spacing](https://youtu.be/9ElrcTtAxzA) goes deeper into how to apply these correctly.
 
 ### Border variables
@@ -157,8 +157,6 @@ Define borders for reuse. Consider defining specific colors in addition to radiu
 Shadows for `text-shadow` and `box-shadow`.
 
 ### Other variables
-- transition, animation
-- navbar height, footer height, opacity
 
 Consider adding variables for animations when you use them at multiple places on your website.
 
@@ -171,6 +169,7 @@ Now the snippet only needs a few adjustments to also allow us to swap between di
 (wip)
 
 ## Breakpoint variables via PostCSS plugin
+
 One great way to enhance CSS without changing anything about how you write CSS is by using the PostCSS plugin. I use its `postcss-preset-env` plugin in every project of mine. This package includes the `custom-media-queries` plugin.
 
 With this plugin we can define a breakpoint and use it in our media queries:
