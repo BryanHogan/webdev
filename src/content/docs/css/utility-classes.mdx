@@ -4,17 +4,17 @@ description: Simple CSS utility classes for common uses.
 ---
 import { Aside } from '@astrojs/starlight/components';
 
-wip
+Utility classes are very useful to streamline styling.
 
 ## What are CSS utility classes?
 
-CSS utility classes are like presets that you can apply to your HTML elements.
+CSS utility classes are predefined styles you can quickly apply to HTML elements.
 
 For example this could be the CSS for a flex container that aligns its items to the middle. So that we don't have to repeat this code multiple times we define a `.flex-container-center` one time in our .css file and now we can apply it whenever needed.
 
-<Aside>How much you style through utility classes like this depends on you. There are CSS frameworks like Tailwindcss that take this to the next level and make you do the whole styling through just using utility classes.</Aside>
+<Aside>How much you style through utility classes like this depends on you. There are CSS frameworks like TailwindCSS that take this to the next level and make you do the whole styling through just using utility classes.</Aside>
 
-## CSS utility classes collection
+## CSS utility classes collection overview
 
 This is a collection of CSS utility classes I like to frequently use:
 
@@ -68,17 +68,69 @@ This is a collection of CSS utility classes I like to frequently use:
 .inverted-colors {
 	/*Invert colors here*/
 }
-
-.apply-text-max-width {
-
-}
-
 ```
 
-- fill screen: min-height: calc(100svh - var(--navbar-height) - var(--footer-height)); but dont use it to push away scroll hook on hero page
-- text max width (apply variable selected)
-- smart max width using min
+### Fill Height 10svh
+
+```css
+.height-smart-fill-screen {
+    min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
+}
+```
+
+This class is used to vertically fill the viewport height, the screen that's actually shown to the user. [`100svh`](https://web.dev/blog/viewport-units) is the screen height between the top and bottom browser bars you might see on your phone, it will automatically adjust depending on whether the bars are shown or not.  
+Since additionally to the UI that every browser app has we also display a header and probably footer on our own page we also subtract these.
+
+I use this to make sure that my footer on pages with almost no content is still at the bottom so it looks consistent throughout the pages.
+
+You could also use this for a hero section, but make sure to reduce the height a bit so part of the next section gets shown to the user, you want to hook the user into starting to scroll on your page.
+
+### Flow
+
+```css
+.flow > *:not(:first-child){
+    margin-block-start: var(--flow-space); /*1em*/
+}
+```
+
+Flow adds margin-top to all its direct children, which is great if you have something like a longer blog text that you want to make more readable. Because we use `em` the gaps become bigger for bigger elements and smaller for smaller elements, making the content flow much better.
+
+### Visually Hidden
+
+A very useful utility class to make things more accessibility friendly, especially for screen readers.[^1]
+
+### Margin-inline: auto
+
+```css
+.margin-inline-auto {
+    margin-inline: auto;
+}
+```
+
+The easiest way to center an element horizontally. Sets `margin-left` and `margin-right` to auto, thus both trying to take up space making the element land in the center.
+
+### Base Layout
+
+My favorite way to make a common layout with modern CSS. Allows us to easily center content, having breakout elements or creating asides. Kevin Powell talks about it in [his video on using container and wrapper classes](https://youtu.be/c13gpBrnGEw).
 
 
-- visually hidden / screen reader only: https://youtu.be/fyuao3G-2qg?t=256
-- Using grid to style layout by Kevin Powell: https://youtu.be/Thudicbgqtg?t=2937
+### Side-gap-padding
+
+I like to use this to apply the padding I have defined earlier which is usually relevant for mobile views. For some pages I do not want to use the `.base-layout` class but I want to keep the same distance to the end of the screen on both sides.
+
+### Inverted-colors
+
+I use inverted-colors to invert colors. Just redefining the inverted colors through variables is enough for it to work. So depending on which colors I am using for my main design I apply the opposite colors here, useful to make the design look more visually interesting.
+
+---
+
+<details>
+
+<summary>Helpful Sources & References</summary>
+
+- Using grid to style layout by Kevin Powell from his 3 hour Astro blog course: https://youtu.be/Thudicbgqtg?t=2937
+- Possible approach to using container and wrapper classes by Kevin Powell: https://youtu.be/c13gpBrnGEw
+
+</details>
+
+[^1]: `.visually-hidden` explained by Kevin Powell: https://youtu.be/fyuao3G-2qg?t=256
