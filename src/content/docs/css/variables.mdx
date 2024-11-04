@@ -23,7 +23,8 @@ Which CSS variables should you use for each project?
     --color-accent-red-500: #B13C3B;
     --color-accent-red-100: #DBABAC;
 
-    /* Consider defining on what a color is used on, like "--color-heading: var(--color-neutral-100)"*/
+    /* Consider defining on what a color is used on,
+    like "--color-heading: var(--color-neutral-100)"*/
  
     
 /* Typography */
@@ -134,19 +135,34 @@ h4 {font-size: var(--text-size-xl);}
 
 ### Color variables
 
-Select colors as described on [this page](/visual-design/colors). Define them to reuse them when needed. This way we have a coherent design. And if needed we can change the colors at one place, this can be usuful when we want to have different color themes such as light and dark mode.
+Select colors as described on [this page](/visual-design/colors). Define them to reuse them when needed, this way we do not have slight variants in color when do not want that and it is easier to make the overall design feel coherent. And if needed we can change the colors at one place, this is especially usuful when we want to have different color themes such as light and dark mode.
 
 ### Typography variables
 
+For the typography we define which font to use, the basics of its styling and which font sizes and weight we are going to use.
+
+If you need to squeeze out some more loading speed you can [optimize your font](https://byteofdev.com/posts/speed-up-font-loading/). 
+
 ### Spacing variables
+
+Define spacing sizes. We want to keep reusing these values. Elements of the same group will be placed closer together, while items of different groups have larger spacing. By defining values we can achieve a design that looks much cleaner and does not look for feel arnotrary.  
+This 10 minute Youtube video on [rules for good spacing](https://youtu.be/9ElrcTtAxzA) goes deeper into how to apply these correctly.
 
 ### Border variables
 
+Define borders for reuse. Consider defining specific colors in addition to radius and width.
+
 ### Shadow variables
+
+Shadows for `text-shadow` and `box-shadow`.
 
 ### Other variables
 - transition, animation
 - navbar height, footer height, opacity
+
+Consider adding variables for animations when you use them at multiple places on your website.
+
+
 
 ## Multi color themes
 
@@ -178,5 +194,6 @@ With this plugin we can define a breakpoint and use it in our media queries:
     - MDN docs on media queries: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries
     - CSS variables as used in the Starlight project on Github: https://github.com/withastro/starlight/blob/main/packages/starlight/style/props.css
     - Kevin Powell example Astro blog project: https://youtu.be/Thudicbgqtg?t=1163
+    - On how to use spacing variables well for good spacing: https://youtu.be/9ElrcTtAxzA
 
 </details>
