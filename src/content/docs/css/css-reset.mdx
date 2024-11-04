@@ -166,6 +166,11 @@ code {
     font-family: var(--mono-font);
 }
 
+ul[role="list"] {
+  list-style-type: none; /* Do <ul role="list">, to use when list is semantic*/
+  padding: 0;
+}
+
 :has(:target) {
     scroll-padding-top: var(--navbar-height)
 }

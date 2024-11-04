@@ -23,6 +23,7 @@ Which CSS variables should you use for each project?
     --color-accent-red-500: #B13C3B;
     --color-accent-red-100: #DBABAC;
 
+    /* Consider defining on what a color is used on, like "--color-heading: var(--color-neutral-100)"*/
  
     
 /* Typography */
@@ -59,6 +60,8 @@ Which CSS variables should you use for each project?
     --space-2xl: 5.25rem;
     --space-3xl: 8.5rem;
 
+    --flow-space: 1em;
+
 /* Border */
     --border-radius-s: 4px;
     --border-radius-m: 8px;
@@ -89,7 +92,11 @@ Which CSS variables should you use for each project?
     --navbar-height: 3.5rem;
     --footer-height: 8rem;
     --side-gap-padding: var(--space-s);
-    --max-width-smart-container: 45rem;
+
+    
+    --base-layout-max-width: 84rem;
+    --main-content-max-width: 45rem;
+    --text-max-width: min(75ch, var(--max-width-smart-container));
 
     --opacity-s: 0.3;
     --opacity-m: 0.5;

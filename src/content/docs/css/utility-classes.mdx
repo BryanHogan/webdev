@@ -25,8 +25,8 @@ This is a collection of CSS utility classes I like to frequently use:
     min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
 }
 
-.text-content > *:not(:first-child){
-    margin-block-start: 1.5em;
+.flow > *:not(:first-child){
+    margin-block-start: var(--flow-space); /* --flow-space defined in var, is 1em*/
 }
 
 .visually-hidden {
@@ -45,9 +45,18 @@ This is a collection of CSS utility classes I like to frequently use:
     margin-inline: auto;
 }
 
-.smart-container-width {
-    width: min(100% - (var(--side-gap-padding) * 2), var(--max-width-smart-container));
+.base-layout {
+	display: grid;
+	grid-template-columns: minmax(var(--side-gap-padding), 1fr) min(var(--max-width-smart-container), 100% - (var(--side-gap-padding) * 2)) minmax(var(--side-gap-padding), 1fr);
+	& > * {
+		grid-column: 2 / 3;
+	}
+	& > .full-width {
+		grid-column: 1 / -1;
+	}
+	/* Add additional breakout areas to make breakouts or place asides inside; Use @container query to get size, then place either to the left or right, or below/above if not enough size*/
 }
+/* Either use base-layout or smart-container-width, don't need both */
 
 .main-header-element {
     padding-top: max(8svh, var(--navbar-height) + 2rem);
@@ -57,9 +66,20 @@ This is a collection of CSS utility classes I like to frequently use:
     padding-inline: var(--side-gap-padding);
 }
 
+.inverted-colors {
+	/*Invert colors here*/
+}
+
+.apply-text-max-width {
+
+}
+
 ```
 
 - fill screen: min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
 - text max width (apply variable selected)
 - smart max width using min
+
+
 - visually hidden / screen reader only: https://youtu.be/fyuao3G-2qg?t=256
+- Using grid to style layout by Kevin Powell: https://youtu.be/Thudicbgqtg?t=2937
