@@ -47,7 +47,7 @@ This is a collection of CSS utility classes I like to frequently use:
 
 .base-layout {
 	display: grid;
-	grid-template-columns: minmax(var(--side-gap-padding), 1fr) min(var(--max-width-smart-container), 100% - (var(--side-gap-padding) * 2)) minmax(var(--side-gap-padding), 1fr);
+	grid-template-columns: minmax(var(--side-gap-padding), 1fr) min(var(--base-layout-max-width), 100% - (var(--side-gap-padding) * 2)) minmax(var(--side-gap-padding), 1fr);
 	& > * {
 		grid-column: 2 / 3;
 	}
