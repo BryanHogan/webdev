@@ -40,7 +40,7 @@ Control over it's styling and behaviour is limited though. By using `input` and 
         <span>This is a nice text or title.</span>
         <span class="caret-icon">&gt;</span>
     </label>
-    <div class="collapsable">
+    <div class="collapsible">
         <p>This text can be hidden.</p>
     </div>
 </div>
@@ -57,11 +57,11 @@ label {
     flex-direction: row;
     align-items: center;
 }
-.collapsable {
+.collapsible {
     height: 0px;
     overflow: hidden;
 }
-input[name="collapse-checkbox"]:checked ~ .collapsable {
+input[name="collapse-checkbox"]:checked ~ .collapsible {
     height: auto;
 }
 input[name="collapse-checkbox"]:checked ~ label .caret-icon {
@@ -73,9 +73,9 @@ span {
 ```
 
 ### Animated Accordion
-To make the accordion animated we need add a transform, but there's a problem. Transition does not work on the height property when we go from 0 to auto. So what can we do?
+To make the accordion animated we need to add a transform, but there's a problem. Transition does not work on the height property when we go from 0 to auto. So what can we do?
 
-We start by making the container a grid element and defining `grid-template-rows` as 0fr. Then we define `grid-template-rows` as 1fr on checked and transition this instead. We move over the overflow: hidden to the child element. Finally we add the transition property to the collapsable element and icon, that's it.
+We start by making the container a grid element and defining `grid-template-rows` as 0fr. Then we define `grid-template-rows` as 1fr on checked and transition this instead. We move over the overflow: hidden to the child element. Finally we add the transition property to the collapsible element and icon, that's it.
 
 ```css
 // .css
@@ -91,15 +91,15 @@ label {
 .caret-icon {
   transition: transform 200ms;
 }
-.collapsable {
+.collapsible {
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 250ms;
 }
-.collapsable > * {
+.collapsible > * {
   overflow: hidden;
 }
-input[name="collapse-checkbox"]:checked ~ .collapsable {
+input[name="collapse-checkbox"]:checked ~ .collapsible {
   grid-template-rows: 1fr;
 }
 input[name="collapse-checkbox"]:checked ~ label .caret-icon {
