@@ -17,35 +17,38 @@ So what steps to follow to launch your website? 📋
 1. **Content.** Think of content, **what content should be included**? Just in purely written form, what elements should make up the site? It might also help to think of purpose and goals of your website.
 2. **Group and rank elements**, what belongs together and what is more important? Then start designs around the most important elements first.
 3. **Create visual prototypes.** Go from more abstract to more concrete. For more complex products this design process should look more intricate and iterative, but for simple websites this is enough.  
-    First create the mobile view, then the desktop view. I like to use Figma for this.
+    First create the mobile view, then the desktop view. I like to use Figma for designing these.
 4. **Setup project in code.** (Keywords: Tech-stack, Git repo, IDE)
 5. **Write outline of HTML.** I like to write some HTML to get a rough idea of the layout of my pages and to see what (semantic) elements I will be dealing with.
 6. **Create CSS variables.** It makes sense to control various parts of your design through CSS variables, this way the code is easier to read and changes can be applied faster.
 7. **Build pages.** Bring in already written components and adjust them. This website includes various components for you to use, I like to use these for every project of mine and adjust their styling for each project depending on my needs.  
     Also build the logic. If you need a backend, build that.  
-    This step will require the most amount of time.
-8. **Favicon.** Include a favicon, a favicon is the little icon you see at the top of your browser bar next to the title. It shows up on search results but also when you add a website to your phone homescreen.  
-    I have seen [realfavicongenerator.net](https://realfavicongenerator.net/) recommended before to generate your favicons files. The explanation at [evilmartians.com about favicons](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) on why you'd need all this can also be helpful.
-9. **Sitemap & Robots.txt.** In a sitemap you include information about your site, it helps search engines understand what they should show about your website. The Robots.txt tells search engines what parts of the website they have access to.
-10. **Include Schema.org markup.** Schema.org structured data can be used by search engines to provide additional information such as rich results.  
-    Can recommend this [writeup on using schema markup](https://neilpatel.com/blog/get-started-using-schema/) for your first time of implementing it.  
-    Validate and test with [developers.google.com's tool on structured data](https://developers.google.com/search/docs/appearance/structured-data).[^1]
-    Also [technicalseo.com/tools/schema-markup-generator/](https://technicalseo.com/tools/schema-markup-generator/) is helpful to me for generating Schema.org structured data.
-11. **Legal compliance.** Depending on your region you will have to add different kind of legal compliances such as information on how collected data is used, consent banner etc.
-12. **Get domain**. Namecheap and Porkbun both seem to work well as domain registrars to buy your domain from.
-13. **Host it.** Put online at host of preference. I use DigitalOcean, Cloudflare and Hetzner to host my websites.
-14. "Finished" building site? Time to **test** some things:
-    1. **Optimize images and page speed.** Compress images, add lazy loading, use relevant image sizing, minify CSS and JS, and remove unused code. https://codestitch.app/page-speed-handbook
+    This step will require the most amount of time and is much more complex than I can describe in a few sentences.
+8. **`<Head>` Area:**
+    1. **Favicon.** Include a favicon, a favicon is the little icon you see at the top of your browser bar next to the title. It shows up on search results but also when you add a website to your phone homescreen.  
+        I have seen [realfavicongenerator.net](https://realfavicongenerator.net/) recommended before to generate your favicons files. The explanation at [evilmartians.com about favicons](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) on why you'd need all this can also be helpful.
+    2. **Sitemap & Robots.txt.** In a sitemap you include information about your site, it helps search engines understand what they should show about your website. The Robots.txt tells search engines what parts of the website they have access to.
+    3. **Include Schema.org markup.** Schema.org structured data can be used by search engines to provide additional information such as rich results.  
+        Can recommend this [writeup on using schema markup](https://neilpatel.com/blog/get-started-using-schema/) for your first time of implementing it.  
+        Validate and test with [developers.google.com's tool on structured data](https://developers.google.com/search/docs/appearance/structured-data).[^1]
+        Also [technicalseo.com/tools/schema-markup-generator/](https://technicalseo.com/tools/schema-markup-generator/) is helpful to me for generating Schema.org structured data.
+    4. **Social preview**. When you share a website on social media some content can be shown as a preview, such as an image or a title and description. You can set this with OpenGraph and Twitter metadata, read more on this on the [`<Head>` page](/seo/head).
+9. **Legal compliance.** Depending on your region you will have to add different kind of legal compliances such as information on how collected data is used, consent banner etc.
+10. **Get domain**. Namecheap and Porkbun both seem to work well as domain registrars to buy your domain from.
+11. **Host it.** Put online at host of preference. I use DigitalOcean, Cloudflare and Hetzner to host my websites.
+12. "Finished" building site? Time to **test** some things:
+    1. **Optimize images and page speed.** Compress images, add lazy loading, use relevant image sizing, minify CSS and JS, and remove unused code. See https://codestitch.app/page-speed-handbook.
     2. **Validate HTML** at [validator.w3.org](https://validator.w3.org/).
-    3. **Check your links.** You don't want 404's or errors in your links. I use [drlinkcheck.com](https://www.drlinkcheck.com/)
+    3. **Check your links.** You don't want 404's or errors in your links. I use [drlinkcheck.com](https://www.drlinkcheck.com/).
     4. **Lighthouse check.** `Accessibility`, `Best Practices` and `SEO` should all be at a 100, `Performance` should be near 100.
     5. **Test page speed** on something like [pagespeed.web.dev](https://pagespeed.web.dev/).
-    6. **Check accessibility**, the [a11y project has a checklist](https://www.a11yproject.com/checklist/) with considerations to maintain good accessibility.
-    7. **Test on multiple devices and browsers.**
-    8. **Get user feedback**, do user testing.
-15. **Add analytics.** If you want advanced insights into user behaviour on your site add an analystics tool like Google Analytics or choose less intrusive options like Matomo, Umami or Plausible.
-16. **Add site to the [Google Search Console](https://search.google.com/search-console/about).** Consider other search engines if relevant, e.g. Naver for South Korea.
-17. That's it! 🎉
+    6. **Check grammar.** Test your site for any typos or grammatical errors. Built in spell checkers in your IDE like "Code Spell Checker" for Visual Studio Code might miss some errors.
+    7. **Check accessibility**, the [a11y project has a checklist](https://www.a11yproject.com/checklist/) with considerations to maintain good accessibility.
+    8. **Test on multiple devices and browsers.**
+    9. **Get user feedback**, do user testing.
+13. **Add analytics.** If you want advanced insights into user behaviour on your site add an analystics tool like Google Analytics or choose less intrusive options like Matomo, Umami or Plausible.
+14. **Add site to the [Google Search Console](https://search.google.com/search-console/about).** Consider other search engines if relevant, e.g. Naver for South Korea.
+15. That's it! 🎉
 
 </Steps>
 

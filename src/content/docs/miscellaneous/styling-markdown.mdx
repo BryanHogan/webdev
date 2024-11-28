@@ -8,7 +8,7 @@ Writing blog posts in markdown is great. It's simple and fast.
 Markdown is a simple way to write text using common symbols to add things like \*\***bold**\*\*, \**italics*\*, or lists.  
 Here's an overview of things you can achieve with Markdown: <a href="https://www.markdownguide.org/cheat-sheet/" target="_blank">Markdown Cheat Sheet</a>. 
 
-Many webpages have their content written in markdown. The markdown content gets then transformed into HTML that is displayed on the website. But when you are building your own website you will also want to style that content, so how could that look like?
+Many webpages have their content written in markdown. There are many frameworks that use markdown like Astro, Hugo or Eleventy. The markdown content gets transformed into HTML that is displayed on the website. But when you are building your own website you will also want to style that content, so how could that look like?
 
 ## On styling content written in markdown
 There are multiple ways you can approach styling your own markdown content.
@@ -22,17 +22,16 @@ Part of your styling such as `<p>` and `<h1>` elements might already have stylin
 
 
 ## Styling the different elements
-I will asume that the html should look something like this:
+I will assume that the html should look something like this:
 
 ```html
 <main>
-    <div class="markdown-container">
+    <article class="markdown-container">
         <slot /> <!-- //Markdown content inserted  here -->
-    </div>
+    </article>
 </main>
 ```
 
-*Note: Using `main` or `article` is okay.*  
 To this container we want to apply some styling as well as on all its children like this:
 
 ```css
@@ -44,7 +43,9 @@ To this container we want to apply some styling as well as on all its children l
 }
 ```
 
-The markdown-container will have a max width of `700px`, or smaller for mobile devices. The keyword `min` selects the smaller amount. You might also want to make the container into a flex-box or grid depending on how you want to control your layout.
+The markdown-container will have a max width of `700px`, or smaller for mobile devices. The keyword `min` selects the smaller amount. Instead of a max-width of `700px` you could use `75ch`, which would count characters.  
+You might also want to make the container into a flex-box or grid depending on how you want to control your layout.
+
 
 To space the elements I give all direct children of the container except for the first a margin-top of `1.5em`.
 
