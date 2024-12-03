@@ -86,9 +86,6 @@ Which CSS variables should you use for each project?
 
     /* consider adding animation var if needed */
 
-/* Breakpoints */
-    --breakpoint-m: 48rem; /* If using PostCSS (Or SASS or SCSS) */
-
 /* Other */
     --navbar-height: 3.5rem;
     --footer-height: 8rem;
@@ -98,9 +95,8 @@ Which CSS variables should you use for each project?
     --base-layout-max-width: 84rem;
     --main-content-max-width: 45rem;
 
-    --opacity-s: 0.3;
-    --opacity-m: 0.5;
-    --opacity-l: 0.7;
+    --opacity-weak: 0.3;
+    --opacity-strong: 0.7;
 }
 ```
 
@@ -166,19 +162,6 @@ I also like to define the minimum height of my header and footer. This makes it 
 Now the snippet only needs a few adjustments to also allow us to swap between different color profiles like light and dark mode.
 
 (wip)
-
-## Breakpoint variables via PostCSS plugin
-
-One great way to enhance CSS without changing anything about how you write CSS is by using the PostCSS plugin. I use its `postcss-preset-env` plugin in every project of mine. This package includes the `custom-media-queries` plugin.
-
-With this plugin we can define a breakpoint and use it in our media queries:
-
-```css
-@custom-media --viewport-m (min-width: 48rem);
-
-/* Which allows us to:*/
-@media (--viewport-m) { }
-```
 
 ---
 

@@ -68,6 +68,32 @@ This is a collection of CSS utility classes I like to frequently use:
 .inverted-colors {
 	/*Invert colors here*/
 }
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.set-base-layout-max-width {
+  max-width: min(var(--base-layout-max-width), 100% - (var(--side-gap-padding) * 2));
+}
+.set-main-content-max-width {
+  max-width: var(--main-content-max-width);
+}
 ```
 
 ### Fill Height 10svh

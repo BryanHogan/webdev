@@ -122,11 +122,7 @@ html[data-theme='light'] {
 }
 
 body {
-    font-family: var(--font-family);
-    line-height: var(--font-line-height);
     -webkit-font-smoothing: antialiased;
-    color: var(--color-neutral-100);
-    background-color: var(--color-neutral-900);
 }
 
 img, picture, video, canvas, svg {
@@ -154,10 +150,6 @@ h1, h2 {
     text-wrap: balance;
 }
 
-code {
-    font-family: var(--mono-font);
-}
-
 ul[role="list"] {
   list-style-type: none; /* Do <ul role="list">, to use when list is semantic*/
   padding: 0;
@@ -167,7 +159,7 @@ ul[role="list"] {
     scroll-padding-top: var(--navbar-height)
 }
 
-@media (prefers-reduced-motion: no-preferene) {
+@media (prefers-reduced-motion: no-preference) {
     :has(:target) {
         scroll-behavior: smooth;
     }
