@@ -2,45 +2,89 @@
 title: Website Builders
 description: Different ways to build a website.
 ---
+import { Icon } from '@astrojs/starlight/components';
 
 Since there are various needs when it comes to having and building a website I want to highlight that developing your own website might not always be the best option for your situation. There are various ways you can create a website.
 
-The 3 main ways to build a website:
+The 3 main ways to build a website are:
 
 1. Website builders
 2. Content management systems (CMS)
 3. Custom coded
 
-Website builders are more simple but lack in customizability. Custom coded is the most complex but gives you full freedom and thus more room for optimization.
+Website builders are more simple but lack in customizability. Custom coded is the most complex but gives you full freedom and thus more room for optimization. (The term website builder and CMS is used interchangeably in the following text.)
 
 But even for each category there are a multitude of options that each have different use cases.
 
+Want to build your own online shop? ➡️ Shopify  
+Visual website builder that feels like Figma for designers ➡️ Webflow or Framer or Builder.io  
+E-Mail newsletter based ➡️ Substack or Beehiiv or Buttondown  
+Very simple and very basic website ➡️ Google sites  
+
 ## Overview of different website builders
 
-Want to build your own online shop? ➡️ Shopify
+### Documentation pages & knowledge bases
 
-Visual website builder that feels like Figma for designers ➡️ Webflow or Framer or builder.io
+These tools focus on providing a simple way to build content-heavy documentation sites. They use complex web frameworks that you can utilize to customize as needed, or you can keep it simple and follow the setup and then write your content in markdown files.
 
-E-Mail newsletter based ➡️ Substack or Beehiiv or Buttondown
+| Tool | Use case | Ease of Use | Customizability | Cost |
+| --- | --- | --- | --- | --- |
+| [Starlight](https://starlight.astro.build/) | Create documentation sites using Markdown. Utilizing Astro. | ⭐⭐ | ⭐⭐⭐ | Free |
+| [Nextra](https://nextra.site/) | Create documentation sites using Markdown. Utilizing Next.js. | ⭐⭐ | ⭐⭐⭐ | Free |
 
-Very simple and very basic website ➡️ Google sites
+### Visual site builders that feel like Figma
 
-Quite simple website builder ➡️ Hostinger Website Builder (Or Wix or Squarespace but they are more expensive)
+These visual site builders focus on giving you a design-driven interface to create good-looking sites while retaining control over the design.
 
-I could continue this list almost endlessly but in summary the tools above will be better for you if you quickly need a website that you can maintain yourself without much expertise and upfront costs at the cost of customizability and things like ownership or search engine optimization (SEO).
+| Tool | Use case | Ease of Use | Customizability | Cost |
+| --- | --- | --- | --- | --- |
+| Webflow | Create websites using Figma like interface | ⭐⭐ | ⭐⭐ | Monthly subscription |
+| Framer | Creating documentation sites using Markdown | ⭐⭐ | ⭐⭐ | Monthly subscription |
+| Builder.io | Creating documentation sites using Markdown | ⭐⭐ | ⭐⭐ | Monthly subscription |
+| WebStudio | Creating documentation sites using Markdown | ⭐⭐ | ⭐⭐ | Monthly subscription or free |
 
-## Overview of different CMS
+### Using existing note taking tools
 
-If you want to go a bit deeper and have a bit more control of your website you can use content management systems (CMS).
+Use the writing apps you are already familiar with to create your website.
 
-A popular CMS tool is WordPress but there are many others as well like Drupal or Ghost which is focussed on blogging.
+| Tool | Use case | Ease of Use | Customizability | Cost |
+| --- | --- | --- | --- | --- |
+| Obsidian Publish | Publish Obsidian notes using the official integration.  | ⭐⭐⭐ | ⭐⭐ | Monthly subscription |
+| Obsidian Quartz | Publish Obsidian notes using Quartz. | ⭐⭐ | ⭐⭐ | Free |
+| Notion | Publish Notion notes as a website using Notion's official integration. | ⭐⭐⭐ | ⭐⭐ | Monthly subscription |
 
-For these tools you can already decide if you want to host them yourself or if you want to use the respective companies offerings.
+### Beginner-friendly builders
 
-Then there are options like Starlight or Nextra that can already belong to the custom coding category, but because of how simple they are I want to mention them here, they are both great tools to build a documentation style page like the one you are reading right now. Especially Starlight has been a joy to use for me.
+These tools are especially simple to use but come at the cost of customization. They are also typically more expensive.
+
+| Tool | Use case | Ease of Use | Customizability | Cost |
+| --- | --- | --- | --- | --- |
+| Squarespace | One of the easiest ways to create a website.  | ⭐⭐⭐ | ⭐⭐ | High monthly subscription |
+| Wix | One of the easiest ways to create a website. | ⭐⭐⭐ | ⭐⭐ | High monthly subscription |
+| Google Sites | Very simple but also quite limited. | ⭐⭐⭐ | ⭐ | Free |
+| Hostinger Website Builder | Hostinger is a host provider, but they also have their own website builder. | ⭐⭐ | ⭐⭐ | Monthly subscription |
+| Wordpress | Very popular. Wordpress has multiple visual builders, like Gutenberg, Elementor or beaverbuilder. The theme and plugin ecosystem is large. | ⭐⭐ | ⭐⭐⭐ | Monthly subscription or self-hostable |
+
+If you want a store page Shopify is a popular option. For eCommerce activity and selling things online there is also WooCommerce which is a Wordpress plugin.
+
+This list could continue almost endlessly, but in summary, simple tools above with high ease-of-use will be better for you if you quickly need a website that you can maintain yourself without much expertise and upfront costs at the cost of customizability and things like ownership or search engine optimization (SEO).
 
 ## Custom coding
 
 If you want full control over your website you will have to go with coding it yourself. 
 
 Even when it comes to custom coding your own webpage there are many tools available. But at the core of every website lies HTML, CSS and JavaScript.
+
+For knowledge basis, like this page (webdev.bryanhogan.com), I like Starlight. I own all my content and I have full control since it is just using Astro.  
+For creating static pages like my personal blog I used Astro as well. If I need some interactive behaviour I add Svelte to Astro, Astro allows you to use Svelte components.  
+For highly interactive apps I use SvelteKit.
+
+---
+
+<details>
+
+<summary>Sources & References</summary>
+
+- Helpful step-by-step tutorial on setting up a basic Wordpress site in Hostinger: https://youtu.be/IdxuNU2LkZo
+
+</details>

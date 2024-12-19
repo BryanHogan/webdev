@@ -27,9 +27,9 @@ export default defineConfig({
 		],
 		sidebar: [
 			{
-				label: "For Beginner Devs",
+				label: "Getting Started",
 				items: [
-					{ label: "Getting Started", link: "start/beginner-introduction/" },
+					{ label: "Beginner Introduction", link: "start/beginner-introduction/" },
 					{ label: "Ways To Build Web", link: "start/ways-to-build/" },
 					{ label: "Step Checklist", link: "start/checklist/" }
 				]
