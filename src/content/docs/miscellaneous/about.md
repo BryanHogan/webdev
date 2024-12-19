@@ -1,15 +1,20 @@
 ---
 title: About
-description: About WebDev.BryanHogan.com - A collection of hand-written web components.
+description: About WebDev.BryanHogan.com - A web development guide and component collection.
 ---
 
 What is WebDev.BryanHogan.com about?
 
-## About Web Dev Guidance
+## About Bryan's Web Dev Guide
 
-This page contains a collection of web components written in HTML & CSS for use in any project.
+WebDev.BryanHogan.com is a comprehensive guide on how to create modern websites using the underlying technologies of all website, basic HTML and CSS.
 
-I have been using AstroJS a lot recently and carry over components from one project to the next. I want to give them their own page, think about how they could be improved, help other web developers and also get feedback on how to make them even better.
+This WebDev guide focusses on the following values:
+- Fast and performant web pages
+- Providing a high quality user experience (UX)
+- Websites that can scale and exist long-term
+- Great accessibility
 
-*Made with the Starlight template from AstroJS*
-*add docs + how to update*
+By understanding HTML, CSS and JavaScript a front-end developer can build any website using any well-built web technology.
+
+For each website I build I need similar things. And instead of copying over these from the last project to the next I decided to built this page to store & show-off that knowledge and content. To have one comprehensive place that combines it.

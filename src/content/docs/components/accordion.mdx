@@ -4,6 +4,7 @@ description: A collection of components made from HTML & CSS for any web develop
 ---
 import { Card } from '@astrojs/starlight/components';
 import Accordion from "../../../components/Accordion.astro";
+import { Aside } from '@astrojs/starlight/components';
 
 How to make an accordion element with CSS only and no JavaScript?
 
@@ -111,6 +112,10 @@ span {
 ```
 Now you should have all the skills to build your own accordion element and style it to your liking. To make it look exactly like the example above replace the text caret with a svg image and then swap the two lines, placing the icon before the text. Add a bit of `margin-right` to the svg icon and it's done.
 
+:::note
+With recent updates to CSS it's possible to make an animated accordion (details & summary) with less lines of CSS than described here using the new CSS property `interpolate-size`. But this feature is experimental and not supported by a large amount of browser [as shown on caniuse](https://caniuse.com/mdn-css_properties_interpolate-size). So it's not too relevant now but might be relevant in the future.  
+Kevin Powell has a [video guide](https://youtu.be/Vzj3jSUbMtI) on how to use it.
+:::
 
 Further Links:
 - [CodePen non-animated Accordion](https://codepen.io/BryanHogan/pen/poBpbyP)

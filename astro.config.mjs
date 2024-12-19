@@ -38,16 +38,16 @@ export default defineConfig({
 				label: "Visual Design & UX ✨",
 				items: [
 					{ label: "Building UI & UX", link: "visual-design/building-ui-ux/"},
-					{ label: "Picking Colors", link: "visual-design/colors/", badge: "new" },
+					{ label: "Picking Colors", link: "visual-design/colors/"},
 				],
 			},
 			{
 				label: "CSS 🎨",
 				items: [
 					{ label: "CSS Reset", link: "css/css-reset/"},
-					{ label: "CSS Variables", link: "css/variables/", badge: "new"},
+					{ label: "CSS Variables", link: "css/variables/"},
 					{ label: "Utility Classes", link: "css/utility-classes/", badge: "new"},
-					{ label: "Spacing", link: "css/spacing/", badge: { text: "wip", variant: "caution" } }
+					{ label: "Spacing", link: "css/spacing/"}
 				],
 			},
 			{
@@ -62,14 +62,14 @@ export default defineConfig({
 				items: [
 					{ label: "Components", link: "components/introduction/" },
 					{ label: "Accordion", link: "components/accordion/" },
-					{ label: "NavBar", link: "components/navbar/", badge: { text: "wip", variant: "caution" } },
+					{ label: "NavBar", link: "components/navbar/", badge: "new"},
 				],
 			},
 			{
 				label: "Miscellaneous",
 				items: [
-					{ label: "About", link: "miscellaneous/about/", badge: { text: "draft", variant: "caution" } },
-					{ label: "Styling Markdown", link: "miscellaneous/styling-markdown/", badge: "new" },
+					{ label: "About", link: "miscellaneous/about/"},
+					{ label: "Styling Markdown", link: "miscellaneous/styling-markdown/"},
 					{ label: "Resources", link: "miscellaneous/resources/" }
 				]
 			},
