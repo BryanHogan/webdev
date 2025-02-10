@@ -9,9 +9,9 @@ What is WebDev.BryanHogan.com about?
 
 WebDev.BryanHogan.com is a comprehensive guide on how to create modern websites using the underlying technologies of all website, basic HTML and CSS.
 
-This WebDev guide focusses on the following values:
+This WebDev guide focuses on the following:
 - Fast and performant web pages
-- Providing a high quality user experience (UX)
+- High quality user experience (UX)
 - Websites that can scale and exist long-term
 - Great accessibility
 
