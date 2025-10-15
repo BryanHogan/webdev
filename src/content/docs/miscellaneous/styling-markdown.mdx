@@ -60,8 +60,8 @@ Which means we already should have something similar to this:
 }
 
 body {
-    font-family: ui-sans-serif, "Source Sans Pro", "Helvetica", system-ui;
-    line-height: 1.75;
+    font-family: sans-serif, "Source Sans Pro", "Helvetica", ui-sans-serif, system-ui;
+    line-height: 1.5;
     color: hsl(224, 20%, 97%);
     background-color: hsl(216, 28%, 7%);
 }
@@ -90,7 +90,6 @@ The `font-size` for each section heading should also be set, it makes sense to d
 
 ```css
 img, picture {
-    object-fit: scale-down;
     max-width: 100%;
     height: auto;
     border-radius: 0.25rem;
