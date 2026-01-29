@@ -5,11 +5,11 @@ description: About WebDev.BryanHogan.com - A web development guide and component
 
 What is WebDev.BryanHogan.com about?
 
-## About Bryan's Web Dev Guide
+## About Clean Web Dev Guide
 
-WebDev.BryanHogan.com is a comprehensive guide on how to create modern websites using the underlying technologies of all website, basic HTML and CSS.
+WebDev.BryanHogan.com is a comprehensive guide on how to create modern websites using the underlying technologies of all website, basic HTML and CSS. Keeping it "clean".
 
-This WebDev guide focuses on the following:
+Clean Web Dev Guide focuses on the following:
 - Fast and performant web pages
 - High quality user experience (UX)
 - Websites that can scale and exist long-term

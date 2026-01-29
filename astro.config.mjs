@@ -15,6 +15,7 @@ export default defineConfig({
 		social: {
 			github: 'https://github.com/BryanHogan/webdev',
 			instagram: 'https://www.instagram.com/bryanhoganme/',
+			blueSky: 'https://bsky.app/profile/bryanhogan.com',
 			mastodon: "https://mastodon.social/@BryanHogan",
 			threads: "https://www.threads.net/@bryanhoganme",
 			rss: "https://bryanhogan.com/rss.xml"
