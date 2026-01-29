@@ -1,86 +1,191 @@
 ---
 title: Website Builders
-description: Different ways to build a website.
+description: Different ways to build a website, from simple builders to custom coding.
 ---
-import { Icon } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
-Since there are various needs when it comes to having and building a website I want to highlight that developing your own website might not always be the best option for your situation. There are various ways you can create a website.
+Since there are various needs when it comes to having and building a website, I want to highlight that developing your own website from scratch might not always be the best option for your situation.
 
-The 3 main ways to build a website are:
+The three main ways to build a website are:
 
-1. Website builders
-2. Content management systems (CMS)
-3. Custom coded
+1.  **Website builders** (Simple, fast, less customizable)
+2.  **Content management systems (CMS)** (Manageable content, plugin ecosystems)
+3.  **Custom coded** (Complex, full freedom, optimization)
 
-Website builders are more simple but lack in customizability. Custom coded is the most complex but gives you full freedom and thus more room for optimization. (The term website builder and CMS is used interchangeably in the following text.)
+## Quick Recommendations
 
-But even for each category there are a multitude of options that each have different use cases.
+* **Online Shop:** ➡️ Shopify or WooCommerce
+* **Visual freedom:** ➡️ Webflow, Framer, Builder.io or Figma Sites
+* **Newsletter focus:** ➡️ Substack, Beehiiv, or Buttondown
+* **Simplest possible setup:** ➡️ Google Sites
+* **Quick blog:** ➡️ BearBlog, Obsidan Quartz or Leaflet
 
-Want to build your own online shop? ➡️ Shopify  
-Visual website builder that feels like Figma for designers ➡️ Webflow or Framer or Builder.io  
-E-Mail newsletter based ➡️ Substack or Beehiiv or Buttondown  
-Very simple and very basic website ➡️ Google sites  
+---
 
-## Overview of different website builders
+## 1. Beginner-friendly builders
 
-The following recommendations are sorted into groups for what you might be looking for.
+These tools are especially simple to use but come at the cost of customization. They are also typically more expensive. Best for people who need a website quickly and don't want think about the design or code at all.
 
-### Documentation pages & knowledge bases
+<CardGrid>
+    <LinkCard
+        title="Squarespace"
+        href="https://www.squarespace.com/"
+        description="Ease: Simple | Cost: High <br/> One of the easiest ways to create a website."
+        target="_blank"
+    />
+    <LinkCard
+        title="Wix"
+        href="https://www.wix.com/"
+        description="Ease: Simple | Cost: High <br/> One of the easiest ways to create a website."
+        target="_blank"
+    />
+    <LinkCard
+        title="Google Sites"
+        href="https://sites.google.com/"
+        description="Ease: Very Simple | Cost: Free <br/> Very simple but also quite limited."
+        target="_blank"
+    />
+    <LinkCard
+        title="Hostinger Website Builder"
+        href="https://www.hostinger.com/website-builder"
+        description="Ease: Simple | Cost: Low <br/> Hostinger is a host provider, but they also have their own website builder."
+        target="_blank"
+    />
+    <LinkCard
+        title="WordPress"
+        href="https://wordpress.org/"
+        description="Ease: Moderate | Cost: Varies <br/> The most popular CMS. It can be simple (using visual plugins) or complex depending on your needs. Great ecosystem, but requires maintenance."
+        target="_blank"
+    />
+</CardGrid>
 
-These tools focus on providing a simple way to build content-heavy documentation sites. They use complex web frameworks that you can utilize to customize as needed, or you can keep it simple and follow the setup and then write your content in markdown files.
+---
 
-| Tool | Use case | Ease of Use | Customizability | Cost |
-| --- | --- | --- | --- | --- |
-| [Starlight](https://starlight.astro.build/) | Create documentation sites using Markdown. Utilizing Astro. | ⭐⭐ | ⭐⭐⭐ | Free |
-| [Nextra](https://nextra.site/) | Create documentation sites using Markdown. Utilizing Next.js. | ⭐⭐ | ⭐⭐⭐ | Free |
-| [VitePress](https://vitepress.dev/) | Create documentation sites using Markdown. Utilizing Vue. | ⭐⭐ | ⭐⭐⭐ | Free |
-
-### Visual site builders that feel like Figma
-
-These visual site builders focus on giving you a design-driven interface to create good-looking sites while retaining control over the design.
-
-| Tool | Use case | Ease of Use | Customizability | Cost |
-| --- | --- | --- | --- | --- |
-| Webflow | Create websites using Figma like interface | ⭐⭐ | ⭐⭐ | Monthly subscription |
-| Framer | Create websites using Figma like interface | ⭐⭐ | ⭐⭐ | Monthly subscription |
-| Builder.io | A drag-and-drop builder that works with code-based frameworks for more flexibility | ⭐⭐ | ⭐⭐ | Monthly subscription |
-| WebStudio | An open-source visual builder that offers a free self-hosted option | ⭐⭐ | ⭐⭐ | Monthly subscription or free |
-
-### Using existing note taking tools
+## 2. Using existing note taking tools
 
 Use the writing apps you are already familiar with to create your website.
 
-| Tool | Use case | Ease of Use | Customizability | Cost |
-| --- | --- | --- | --- | --- |
-| Obsidian Publish | Publish Obsidian notes using the official integration.  | ⭐⭐⭐ | ⭐⭐ | Monthly subscription |
-| Obsidian Quartz | Publish Obsidian notes using Quartz. | ⭐⭐ | ⭐⭐ | Free |
-| Notion | Publish Notion notes as a website using Notion's official integration. | ⭐⭐⭐ | ⭐ | Monthly subscription |
+<CardGrid>
+    <LinkCard
+        title="Notion"
+        href="https://www.notion.so/"
+        description="Ease: Simple | Cost: Monthly subscription <br/> Publish Notion notes as a website using Notion's official integration."
+        target="_blank"
+    />
+    <LinkCard
+        title="Obsidian Publish"
+        href="https://obsidian.md/publish"
+        description="Ease: Simple | Cost: Monthly subscription <br/> Publish Obsidian notes using the official integration."
+        target="_blank"
+    />
+    <LinkCard
+        title="Obsidian Quartz"
+        href="https://quartz.jzhao.xyz/"
+        description="Ease: Moderate | Cost: Free <br/> Publish Obsidian notes using Quartz."
+        target="_blank"
+    />
+</CardGrid>
 
-### Beginner-friendly builders
+---
 
-These tools are especially simple to use but come at the cost of customization. They are also typically more expensive.
+## 3. Simple blogging platforms
 
-| Tool | Use case | Ease of Use | Customizability | Cost |
-| --- | --- | --- | --- | --- |
-| Squarespace | One of the easiest ways to create a website.  | ⭐⭐⭐ | ⭐⭐ | High monthly subscription |
-| Wix | One of the easiest ways to create a website. | ⭐⭐⭐ | ⭐⭐ | High monthly subscription |
-| Google Sites | Very simple but also quite limited. | ⭐⭐⭐ | ⭐ | Free |
-| Hostinger Website Builder | Hostinger is a host provider, but they also have their own website builder. | ⭐⭐ | ⭐⭐ | Monthly subscription |
-| Wordpress | Very popular. Wordpress has multiple visual builders, like Gutenberg, Elementor or beaverbuilder. The theme and plugin ecosystem is large. | ⭐⭐ | ⭐⭐⭐ | Monthly subscription or self-hostable |
+Minimal tools focused on writing and publishing blog posts with little to no setup required.
 
-If you want a store page Shopify is a popular option. For eCommerce activity and selling things online there is also WooCommerce which is a Wordpress plugin.
+<CardGrid>
+    <LinkCard
+        title="BearBlog"
+        href="https://bearblog.dev/"
+        description="Ease: Very Simple | Cost: Free <br/> A privacy-first, no-nonsense blogging platform. No JavaScript, no tracking, just writing."
+        target="_blank"
+    />
+    <LinkCard
+        title="Leaflet"
+        href="https://leaflet.pub/"
+        description="Ease: Very Simple | Cost: Free <br/> A simple blogging tool built on the Bluesky AT Protocol."
+        target="_blank"
+    />
+</CardGrid>
 
-This list could continue almost endlessly, but in summary, simple tools above with high ease-of-use will be better for you if you quickly need a website that you can maintain yourself without much expertise and upfront costs at the cost of customizability and things like ownership or search engine optimization (SEO).
+---
 
-## Custom coding
+## 4. Visual site builders
 
-If you want full control over your website you will have to go with coding it yourself. 
+A visual site builder gives you a high degree of freedom when it comes to creating the interface, without writing CSS. But you are locked into a specific provider, and the more custom of a design you want, the more relevant knowing HTML & CSS becomes.
 
-Even when it comes to custom coding your own webpage there are many tools available. But at the core of every website lies HTML, CSS and JavaScript.
+<CardGrid>
+    <LinkCard
+        title="Webflow"
+        href="https://webflow.com/"
+        description="Ease: Moderate | Cost: Monthly subscription <br/> Create websites using Figma like interface."
+        target="_blank"
+    />
+    <LinkCard
+        title="Framer"
+        href="https://www.framer.com/"
+        description="Ease: Moderate | Cost: Monthly subscription <br/> Create websites using Figma like interface."
+        target="_blank"
+    />
+    <LinkCard
+        title="Builder.io"
+        href="https://www.builder.io/"
+        description="Ease: Moderate | Cost: Monthly subscription <br/> A drag-and-drop builder that works with code-based frameworks for more flexibility."
+        target="_blank"
+    />
+    <LinkCard
+        title="WebStudio"
+        href="https://webstudio.is/"
+        description="Ease: Moderate | Cost: Monthly subscription or free <br/> An open-source visual builder that offers a free self-hosted option."
+        target="_blank"
+    />
+    <LinkCard
+        title="Figma Sites"
+        href="https://www.figma.com/sites/"
+        description="Ease: Moderate | Cost: Monthly subscription <br/> Takes designs in Figma, the visual design tool, to create a website."
+        target="_blank"
+    />
+</CardGrid>
 
-For knowledge bases, like this page (webdev.bryanhogan.com), I like Starlight. I own all my content and I have full control since it is just using Astro.  
-For creating static pages like my [personal blog](https://bryanhogan.com/) I used Astro as well. If I need some interactive behaviour I add Svelte to Astro, Astro allows you to use Svelte components.  
-For highly interactive apps I use SvelteKit.
+---
+
+## 5. Documentation pages & knowledge bases
+
+These tools focus on providing a simple way to build content-heavy documentation sites. They use complex web frameworks that you can utilize to customize as needed, or you can keep it simple and follow the setup and then write your content in markdown files.
+
+<CardGrid>
+    <LinkCard
+        title="Starlight"
+        href="https://starlight.astro.build/"
+        description="Ease: Moderate | Cost: Free <br/> Create documentation sites using Markdown. Utilizing Astro."
+        target="_blank"
+    />
+    <LinkCard
+        title="Nextra"
+        href="https://nextra.site/"
+        description="Ease: Moderate | Cost: Free <br/> Create documentation sites using Markdown. Utilizing Next.js."
+        target="_blank"
+    />
+    <LinkCard
+        title="VitePress"
+        href="https://vitepress.dev/"
+        description="Ease: Moderate | Cost: Free <br/> Create documentation sites using Markdown. Utilizing Vue."
+        target="_blank"
+    />
+</CardGrid>
+
+---
+
+## 6. Custom coding
+
+*Best for: Full control, performance optimization, and unique functionality.*
+
+If you want absolute freedom, you have to code it yourself. At the core, this means HTML, CSS, and JavaScript.
+
+**My Personal Stack:**
+* **Knowledge Bases:** For sites like this page, I use **Starlight**.
+* **Static Pages:** For my [personal blog](https://bryanhogan.com/), I also use **Astro**.
+* **Interactive:** If I need complex behavior, I add **Svelte** components.
+* **Web Apps:** For highly interactive applications, I move to **SvelteKit**.
 
 ---
 
