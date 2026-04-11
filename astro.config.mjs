@@ -12,14 +12,14 @@ export default defineConfig({
 			src: './src/assets/Penguin-Web-Dev-Bryan-Hogan-Logo.svg',
 		},
 		lastUpdated: true,
-		social: {
-			github: 'https://github.com/BryanHogan/webdev',
-			instagram: 'https://www.instagram.com/bryanhoganme/',
-			blueSky: 'https://bsky.app/profile/bryanhogan.com',
-			mastodon: "https://mastodon.social/@BryanHogan",
-			threads: "https://www.threads.net/@bryanhoganme",
-			rss: "https://bryanhogan.com/rss.xml"
-		},
+		social: [
+			{ icon: "github", label: "GitHub", href: "https://github.com/BryanHogan/webdev" },
+			{ icon: "instagram", label: "Instagram", href: "https://www.instagram.com/bryanhoganme/" },
+			{ icon: "blueSky", label: "BlueSky", href: "https://bsky.app/profile/bryanhogan.com" },
+			{ icon: "mastodon", label: "Mastodon", href: "https://mastodon.social/@BryanHogan" },
+			{ icon: "threads", label: "Threads", href: "https://www.threads.net/@bryanhoganme" },
+			{ icon: "rss", label: "RSS", href: "https://bryanhogan.com/rss.xml" },
+		],
 		editLink: {
 			baseUrl: 'https://github.com/bryanhogan/webdev/edit/master/',
 		},
