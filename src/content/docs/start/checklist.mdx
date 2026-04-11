@@ -1,6 +1,6 @@
 ---
-title: Launching Website Checklist
-description: Steps to follow to develop and launch your website, a checklist.
+title: Website Launch Checklist
+description: A comprehensive website development and launch checklist. Follow these step-by-step instructions covering UX design, HTML/CSS setup, SEO and accessibility.
 ---
 import { Steps } from '@astrojs/starlight/components';
 
@@ -25,14 +25,15 @@ So what steps to follow to launch your website? 📋
     Also build the logic. If you need a backend, build that.  
     This step will require the most amount of time and is much more complex than I can describe in a few sentences.
 8. **`<Head>` Area:**
-    1. **Favicon.** Include a favicon, a favicon is the little icon you see at the top of your browser bar next to the title. It shows up on search results but also when you add a website to your phone homescreen.  
+    1. **Title & meta description.** The title will be the title that shows up at the top of the tab and on search results (`<title>`). The meta description is the description shows up below the titel, e.g. on a Google search, although these days Google often doesn't use it(`<meta name="description">`).
+    2. **Favicon.** Include a favicon, a favicon is the little icon you see at the top of your browser bar next to the title. It shows up on search results but also when you add a website to your phone homescreen.  
         I have seen [realfavicongenerator.net](https://realfavicongenerator.net/) recommended before to generate your favicons files. The explanation at [evilmartians.com about favicons](https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs) on why you'd need all this can also be helpful.
-    2. **Sitemap & Robots.txt.** In a sitemap you include information about your site, it helps search engines understand what they should show about your website. The Robots.txt tells search engines what parts of the website they have access to.
-    3. **Include Schema.org markup.** Schema.org structured data can be used by search engines to provide additional information such as rich results.  
+    3. **Sitemap & Robots.txt.** In a sitemap you include information about your site, it helps search engines understand what they should show about your website. The Robots.txt tells search engines what parts of the website they have access to.
+    4. **Include Schema.org markup.** Schema.org structured data can be used by search engines to provide additional information such as rich results.  
         Can recommend this [writeup on using schema markup](https://neilpatel.com/blog/get-started-using-schema/) for your first time of implementing it.  
         Validate and test with [developers.google.com's tool on structured data](https://developers.google.com/search/docs/appearance/structured-data).[^1]
         Also [technicalseo.com/tools/schema-markup-generator/](https://technicalseo.com/tools/schema-markup-generator/) is helpful to me for generating Schema.org structured data.
-    4. **Social preview**. When you share a website on social media some content can be shown as a preview, such as an image or a title and description. You can set this with OpenGraph and Twitter metadata, read more on this on the [`<Head>` page](/seo/head).
+    5. **Social preview**. When you share a website on social media some content can be shown as a preview, such as an image or a title and description. You can set this with OpenGraph and Twitter metadata, read more on this on the [`<Head>` page](/seo/head).
 9. **Legal compliance.** Depending on your region you will have to add different kind of legal compliances such as information on how collected data is used, consent banner etc.
 10. **Get domain**. Namecheap and Porkbun both seem to work well as domain registrars to buy your domain from.
 11. **Host it.** Put online at host of preference. I use DigitalOcean, Cloudflare and Hetzner to host my websites.

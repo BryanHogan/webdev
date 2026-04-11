@@ -32,7 +32,7 @@ export default defineConfig({
 				items: [
 					{ label: "Beginner Introduction", link: "start/beginner-introduction/" },
 					{ label: "Ways To Build Web", link: "start/ways-to-build/" },
-					{ label: "Step Checklist", link: "start/checklist/" }
+					{ label: "Launch Steps Checklist", link: "start/checklist/" }
 				]
 			},
 			{
