@@ -12,6 +12,7 @@ export default defineConfig({
 			src: './src/assets/Penguin-Web-Dev-Bryan-Hogan-Logo.svg',
 		},
 		lastUpdated: true,
+		disable404Route: true,
 		social: [
 			{ icon: "github", label: "GitHub", href: "https://github.com/BryanHogan/webdev" },
 			{ icon: "instagram", label: "Instagram", href: "https://www.instagram.com/bryanhoganme/" },
