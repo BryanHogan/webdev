@@ -5,7 +5,7 @@ description: The CSS I use for rendered Markdown and MDX content.
 
 Markdown turns into ordinary HTML. Paragraphs and headings already pick up the styles from [`global.css`](/css/global-css), but articles also need spacing, readable tables, code blocks, quotes, footnotes and a few less common elements.
 
-I scope these styles to `.markdown-container`. Without the wrapper, a rule for article tables or lists could also change a navigation menu or a component.
+I scope these styles to `.markdown-container`.
 
 ```html
 <main class="base-layout base-layout-content">
@@ -14,8 +14,6 @@ I scope these styles to `.markdown-container`. Without the wrapper, a rule for a
     </article>
 </main>
 ```
-
-The CSS uses nesting. If your build setup does not process nested CSS, write the selectors out in full or add the required CSS processing.
 
 ## The Markdown CSS
 
@@ -281,15 +279,13 @@ The CSS uses nesting. If your build setup does not process nested CSS, write the
 
 The first rule gives each direct child some space from the element before it. Headings and card components need larger gaps, so they get specific rules afterwards.
 
-The `div > p` selector handles paragraphs wrapped by MDX components. I added it after finding that the direct-child rule did not reach those paragraphs. You may need similar exceptions for components in your own project.
+The `div > p` selector handles paragraphs that might be wrapped in another element.
 
 `:where(p:not(.eyebrow))` has zero selector specificity. A component class such as `.eyebrow` can keep its own text color without fighting the article rule.
 
 ## Links and images
 
-External links get an icon through a mask. The mask uses `currentColor`, so it follows the link's hover color. Add the icon at `public/icons/external-link.svg`, or remove this rule.
-
-Buttons are excluded. An icon after every linked button looked cluttered and could disturb its layout.
+External links get an icon through a mask. The mask uses `currentColor`, so it follows the link's hover color. Add the icon at `public/icons/external-link.svg`, or remove this rule. Buttons are excluded.
 
 Images keep their natural aspect ratio, cannot grow past the width set by the reset and are centred when they are narrower than the article.
 
@@ -299,19 +295,19 @@ Images keep their natural aspect ratio, cannot grow past the width set by the re
 
 Blockquotes use a thicker visual edge on the inline start side. Logical properties make this work in left-to-right and right-to-left documents.
 
-Lists get enough inline padding for their markers. Long list content can wrap anywhere instead of forcing the article wider than the screen.
+Lists get enough inline padding for their markers. Long list item content can wrap anywhere.
 
 ## Tables and code
 
-Tables become scrollable when they are wider than their container. `display: block` is necessary for `overflow: auto` to work reliably here. The table itself can stay at its content width when it is small.
+Tables become scrollable when they are wider than their container. `display: block` is necessary for `overflow: auto` to work. The table itself can stay at its content width when it is small.
 
 Inline code and code blocks are selected separately. `code:not(pre code)` styles code inside a sentence. The nested `code` rule inside `pre` only makes it inherit the block's size.
 
-Astro's syntax highlighter writes an inline background on `.astro-code`, so that one rule needs `!important` if the site surface color should win.
+> When using Astro: Astro's syntax highlighter writes an inline background on `.astro-code`, so that one rule needs `!important` if the site surface color should win.
 
 ## Less common elements
 
-The file also covers keyboard input, highlighted text, abbreviations, citations and generated footnotes. These are easy to miss because they may not appear in the first few articles. I keep them here so they still match when they are eventually used.
+The file also covers keyboard input, highlighted text, abbreviations, citations and generated footnotes.
 
 Highlighted text uses `--color-surface-muted` as a fallback. Browsers that support `color-mix()` use the current accent color instead.
 
