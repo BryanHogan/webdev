@@ -20,14 +20,14 @@ This is not meant to replace component CSS. If several elements always need the 
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  width: 1px;
+  inline-size: 1px;
+  block-size: 1px;
   padding: 0;
   margin: -1px;
   overflow: hidden;
+  clip-path: inset(50%);
   white-space: nowrap;
-  border-width: 0;
+  border: 0;
 }
 
 .margin-inline-auto {
@@ -51,7 +51,7 @@ This is not meant to replace component CSS. If several elements always need the 
 }
 
 .main-header-element {
-    padding-top: max(8svh, var(--navbar-height) + 2rem);
+    padding-block-start: max(8svh, var(--navbar-height) + 2rem);
 }
 
 .side-gap-padding {
@@ -79,7 +79,7 @@ This is not meant to replace component CSS. If several elements always need the 
 
 .eyebrow {
   margin-block-end: var(--space-s);
-  color: var(--color-accent-200);
+  color: var(--color-eyebrow);
   font-size: var(--font-size-s);
   font-weight: var(--font-weight-semi-bold);
   line-height: var(--font-line-height);
@@ -95,41 +95,41 @@ This is not meant to replace component CSS. If several elements always need the 
 }
 
 
-.margin-top-3xl { margin-top: var(--space-3xl) !important; }
-.margin-top-2xl { margin-top: var(--space-2xl) !important; }
-.margin-top-xl { margin-top: var(--space-xl) !important; }
-.margin-top-l { margin-top: var(--space-l) !important; }
-.margin-top-m { margin-top: var(--space-m) !important; }
-.margin-top-s { margin-top: var(--space-s) !important; }
-.margin-top-xs { margin-top: var(--space-xs) !important; }
-.margin-top-2xs { margin-top: var(--space-2xs) !important; }
+.margin-block-start-3xl { margin-block-start: var(--space-3xl) !important; }
+.margin-block-start-2xl { margin-block-start: var(--space-2xl) !important; }
+.margin-block-start-xl { margin-block-start: var(--space-xl) !important; }
+.margin-block-start-l { margin-block-start: var(--space-l) !important; }
+.margin-block-start-m { margin-block-start: var(--space-m) !important; }
+.margin-block-start-s { margin-block-start: var(--space-s) !important; }
+.margin-block-start-xs { margin-block-start: var(--space-xs) !important; }
+.margin-block-start-2xs { margin-block-start: var(--space-2xs) !important; }
 
-.margin-bottom-3xl { margin-bottom: var(--space-3xl) !important; }
-.margin-bottom-2xl { margin-bottom: var(--space-2xl) !important; }
-.margin-bottom-xl { margin-bottom: var(--space-xl) !important; }
-.margin-bottom-l { margin-bottom: var(--space-l) !important; }
-.margin-bottom-m { margin-bottom: var(--space-m) !important; }
-.margin-bottom-s { margin-bottom: var(--space-s) !important; }
-.margin-bottom-xs { margin-bottom: var(--space-xs) !important; }
-.margin-bottom-2xs { margin-bottom: var(--space-2xs) !important; }
+.margin-block-end-3xl { margin-block-end: var(--space-3xl) !important; }
+.margin-block-end-2xl { margin-block-end: var(--space-2xl) !important; }
+.margin-block-end-xl { margin-block-end: var(--space-xl) !important; }
+.margin-block-end-l { margin-block-end: var(--space-l) !important; }
+.margin-block-end-m { margin-block-end: var(--space-m) !important; }
+.margin-block-end-s { margin-block-end: var(--space-s) !important; }
+.margin-block-end-xs { margin-block-end: var(--space-xs) !important; }
+.margin-block-end-2xs { margin-block-end: var(--space-2xs) !important; }
 
-.margin-left-3xl { margin-left: var(--space-3xl) !important; }
-.margin-left-2xl { margin-left: var(--space-2xl) !important; }
-.margin-left-xl { margin-left: var(--space-xl) !important; }
-.margin-left-l { margin-left: var(--space-l) !important; }
-.margin-left-m { margin-left: var(--space-m) !important; }
-.margin-left-s { margin-left: var(--space-s) !important; }
-.margin-left-xs { margin-left: var(--space-xs) !important; }
-.margin-left-2xs { margin-left: var(--space-2xs) !important; }
+.margin-inline-start-3xl { margin-inline-start: var(--space-3xl) !important; }
+.margin-inline-start-2xl { margin-inline-start: var(--space-2xl) !important; }
+.margin-inline-start-xl { margin-inline-start: var(--space-xl) !important; }
+.margin-inline-start-l { margin-inline-start: var(--space-l) !important; }
+.margin-inline-start-m { margin-inline-start: var(--space-m) !important; }
+.margin-inline-start-s { margin-inline-start: var(--space-s) !important; }
+.margin-inline-start-xs { margin-inline-start: var(--space-xs) !important; }
+.margin-inline-start-2xs { margin-inline-start: var(--space-2xs) !important; }
 
-.margin-right-3xl { margin-right: var(--space-3xl) !important; }
-.margin-right-2xl { margin-right: var(--space-2xl) !important; }
-.margin-right-xl { margin-right: var(--space-xl) !important; }
-.margin-right-l { margin-right: var(--space-l) !important; }
-.margin-right-m { margin-right: var(--space-m) !important; }
-.margin-right-s { margin-right: var(--space-s) !important; }
-.margin-right-xs { margin-right: var(--space-xs) !important; }
-.margin-right-2xs { margin-right: var(--space-2xs) !important; }
+.margin-inline-end-3xl { margin-inline-end: var(--space-3xl) !important; }
+.margin-inline-end-2xl { margin-inline-end: var(--space-2xl) !important; }
+.margin-inline-end-xl { margin-inline-end: var(--space-xl) !important; }
+.margin-inline-end-l { margin-inline-end: var(--space-l) !important; }
+.margin-inline-end-m { margin-inline-end: var(--space-m) !important; }
+.margin-inline-end-s { margin-inline-end: var(--space-s) !important; }
+.margin-inline-end-xs { margin-inline-end: var(--space-xs) !important; }
+.margin-inline-end-2xs { margin-inline-end: var(--space-2xs) !important; }
 
 .margin-3xl { margin: var(--space-3xl) !important; }
 .margin-2xl { margin: var(--space-2xl) !important; }
@@ -140,41 +140,41 @@ This is not meant to replace component CSS. If several elements always need the 
 .margin-xs { margin: var(--space-xs) !important; }
 .margin-2xs { margin: var(--space-2xs) !important; }
 
-.padding-top-3xl { padding-top: var(--space-3xl) !important; }
-.padding-top-2xl { padding-top: var(--space-2xl) !important; }
-.padding-top-xl { padding-top: var(--space-xl) !important; }
-.padding-top-l { padding-top: var(--space-l) !important; }
-.padding-top-m { padding-top: var(--space-m) !important; }
-.padding-top-s { padding-top: var(--space-s) !important; }
-.padding-top-xs { padding-top: var(--space-xs) !important; }
-.padding-top-2xs { padding-top: var(--space-2xs) !important; }
+.padding-block-start-3xl { padding-block-start: var(--space-3xl) !important; }
+.padding-block-start-2xl { padding-block-start: var(--space-2xl) !important; }
+.padding-block-start-xl { padding-block-start: var(--space-xl) !important; }
+.padding-block-start-l { padding-block-start: var(--space-l) !important; }
+.padding-block-start-m { padding-block-start: var(--space-m) !important; }
+.padding-block-start-s { padding-block-start: var(--space-s) !important; }
+.padding-block-start-xs { padding-block-start: var(--space-xs) !important; }
+.padding-block-start-2xs { padding-block-start: var(--space-2xs) !important; }
 
-.padding-bottom-3xl { padding-bottom: var(--space-3xl) !important; }
-.padding-bottom-2xl { padding-bottom: var(--space-2xl) !important; }
-.padding-bottom-xl { padding-bottom: var(--space-xl) !important; }
-.padding-bottom-l { padding-bottom: var(--space-l) !important; }
-.padding-bottom-m { padding-bottom: var(--space-m) !important; }
-.padding-bottom-s { padding-bottom: var(--space-s) !important; }
-.padding-bottom-xs { padding-bottom: var(--space-xs) !important; }
-.padding-bottom-2xs { padding-bottom: var(--space-2xs) !important; }
+.padding-block-end-3xl { padding-block-end: var(--space-3xl) !important; }
+.padding-block-end-2xl { padding-block-end: var(--space-2xl) !important; }
+.padding-block-end-xl { padding-block-end: var(--space-xl) !important; }
+.padding-block-end-l { padding-block-end: var(--space-l) !important; }
+.padding-block-end-m { padding-block-end: var(--space-m) !important; }
+.padding-block-end-s { padding-block-end: var(--space-s) !important; }
+.padding-block-end-xs { padding-block-end: var(--space-xs) !important; }
+.padding-block-end-2xs { padding-block-end: var(--space-2xs) !important; }
 
-.padding-left-3xl { padding-left: var(--space-3xl) !important; }
-.padding-left-2xl { padding-left: var(--space-2xl) !important; }
-.padding-left-xl { padding-left: var(--space-xl) !important; }
-.padding-left-l { padding-left: var(--space-l) !important; }
-.padding-left-m { padding-left: var(--space-m) !important; }
-.padding-left-s { padding-left: var(--space-s) !important; }
-.padding-left-xs { padding-left: var(--space-xs) !important; }
-.padding-left-2xs { padding-left: var(--space-2xs) !important; }
+.padding-inline-start-3xl { padding-inline-start: var(--space-3xl) !important; }
+.padding-inline-start-2xl { padding-inline-start: var(--space-2xl) !important; }
+.padding-inline-start-xl { padding-inline-start: var(--space-xl) !important; }
+.padding-inline-start-l { padding-inline-start: var(--space-l) !important; }
+.padding-inline-start-m { padding-inline-start: var(--space-m) !important; }
+.padding-inline-start-s { padding-inline-start: var(--space-s) !important; }
+.padding-inline-start-xs { padding-inline-start: var(--space-xs) !important; }
+.padding-inline-start-2xs { padding-inline-start: var(--space-2xs) !important; }
 
-.padding-right-3xl { padding-right: var(--space-3xl) !important; }
-.padding-right-2xl { padding-right: var(--space-2xl) !important; }
-.padding-right-xl { padding-right: var(--space-xl) !important; }
-.padding-right-l { padding-right: var(--space-l) !important; }
-.padding-right-m { padding-right: var(--space-m) !important; }
-.padding-right-s { padding-right: var(--space-s) !important; }
-.padding-right-xs { padding-right: var(--space-xs) !important; }
-.padding-right-2xs { padding-right: var(--space-2xs) !important; }
+.padding-inline-end-3xl { padding-inline-end: var(--space-3xl) !important; }
+.padding-inline-end-2xl { padding-inline-end: var(--space-2xl) !important; }
+.padding-inline-end-xl { padding-inline-end: var(--space-xl) !important; }
+.padding-inline-end-l { padding-inline-end: var(--space-l) !important; }
+.padding-inline-end-m { padding-inline-end: var(--space-m) !important; }
+.padding-inline-end-s { padding-inline-end: var(--space-s) !important; }
+.padding-inline-end-xs { padding-inline-end: var(--space-xs) !important; }
+.padding-inline-end-2xs { padding-inline-end: var(--space-2xs) !important; }
 
 .padding-3xl { padding: var(--space-3xl) !important; }
 .padding-2xl { padding: var(--space-2xl) !important; }
@@ -184,6 +184,15 @@ This is not meant to replace component CSS. If several elements always need the 
 .padding-s { padding: var(--space-s) !important; }
 .padding-xs { padding: var(--space-xs) !important; }
 .padding-2xs { padding: var(--space-2xs) !important; }
+
+.gap-3xl { gap: var(--space-3xl) !important; }
+.gap-2xl { gap: var(--space-2xl) !important; }
+.gap-xl { gap: var(--space-xl) !important; }
+.gap-l { gap: var(--space-l) !important; }
+.gap-m { gap: var(--space-m) !important; }
+.gap-s { gap: var(--space-s) !important; }
+.gap-xs { gap: var(--space-xs) !important; }
+.gap-2xs { gap: var(--space-2xs) !important; }
 ```
 
 ## Layout utilities
@@ -211,22 +220,22 @@ Add `.base-layout-content` to use the narrower `--content-max-width` instead:
 
 ## Accessibility
 
-`.visually-hidden` keeps content available to assistive technology while taking it out of the visible layout. It is useful for labels that are obvious visually but still need text, such as an icon-only button.
+`.visually-hidden` keeps content available to assistive technology while taking it out of the visible layout. `clip-path` replaces the deprecated `clip` property. It is useful for labels that are obvious visually but still need text, such as an icon-only button.
 
 ## Flex, type and width helpers
 
 `.flex-center` creates the flex container. `.flex-column` and `.flex-row` only set `flex-direction`, so use them on an element that is already flex.
 
-`.eyebrow` is for the short label above a heading. It uses the small type and accent color already defined in `var.css`.
+`.eyebrow` is for the short label above a heading. Its semantic color changes with the theme so it stays readable.
 
 The two max-width helpers only set the limit. Use `.margin-inline-auto` as well when the element should be centred.
 
 ## Spacing utilities
 
-The spacing classes follow the variables from `2xs` through `3xl`. For example:
+The spacing classes follow the variables from `2xs` through `3xl`. The start and end names follow the document's writing direction. The `gap-*` classes add space between children in a flex or grid container.
 
 ```html
-<section class="padding-top-xl margin-bottom-2xl">
+<section class="padding-block-start-xl margin-block-end-2xl">
     ...
 </section>
 ```
