@@ -1,44 +1,33 @@
 ---
 title: CSS Utility Classes
-description: Simple CSS utility classes for common uses.
+description: Small reusable classes for layout, accessibility and spacing.
 ---
-import { Aside } from '@astrojs/starlight/components';
 
-Utility classes are very useful to streamline styling.
+A utility class does one small job. I use them for styles that repeat across unrelated components: centering an element, hiding text visually, setting a common content width or adding a one-off spacing value.
 
-## What are CSS utility classes?
+This is not meant to replace component CSS. If several elements always need the same group of utilities, that group probably deserves its own class.
 
-CSS utility classes are predefined styles you can quickly apply to HTML elements.
-
-For example this could be the CSS for a flex container that aligns its items to the middle. So that we don't have to repeat this code multiple times we define a `.flex-container-center` one time in our .css file and now we can apply it whenever needed.
-
-<Aside>How much you style through utility classes like this depends on you. There are CSS frameworks like TailwindCSS that take this to the next level and make you do the whole styling through just using utility classes.</Aside>
-
-## CSS utility classes collection overview
-
-This is a collection of CSS utility classes I like to frequently use:
+## The utility file
 
 ```css
-//utility.css
-
 .height-smart-fill-screen {
     min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
 }
 
 .flow > *:not(:first-child){
-    margin-block-start: var(--flow-space); /* --flow-space defined in var, is 1em*/
+    margin-block-start: var(--flow-space);
 }
 
 .visually-hidden {
-	position: absolute;
-	clip: rect(0, 0, 0, 0);
-	height: 1px;
-	width: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	white-space: nowrap;
-	border-width: 0;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-width: 0;
 }
 
 .margin-inline-auto {
@@ -46,15 +35,19 @@ This is a collection of CSS utility classes I like to frequently use:
 }
 
 .base-layout {
-	display: grid;
-	grid-template-columns: minmax(var(--side-gap-padding), 1fr) min(var(--base-layout-max-width), 100% - (var(--side-gap-padding) * 2)) minmax(var(--side-gap-padding), 1fr);
-	& > * {
-		grid-column: 2 / 3;
-	}
-	& > .full-width {
-		grid-column: 1 / -1;
-	}
-	/* Add additional breakout areas to make breakouts or place asides inside; Use @container query to get size, then place either to the left or right, or below/above if not enough size*/
+  display: grid;
+  align-content: start;
+  grid-template-columns: minmax(var(--side-gap-padding), 1fr) min(var(--layout-width, var(--site-max-width)), 100% - (var(--side-gap-padding) * 2)) minmax(var(--side-gap-padding), 1fr);
+  & > * {
+    grid-column: 2 / 3;
+  }
+  & > .full-width {
+    grid-column: 1 / -1;
+  }
+}
+
+.base-layout-content {
+  --layout-width: var(--content-max-width);
 }
 
 .main-header-element {
@@ -63,10 +56,6 @@ This is a collection of CSS utility classes I like to frequently use:
 
 .side-gap-padding {
     padding-inline: var(--side-gap-padding);
-}
-
-.inverted-colors {
-	/*Invert colors here*/
 }
 
 .flex-center {
@@ -88,75 +77,172 @@ This is a collection of CSS utility classes I like to frequently use:
   text-align: center;
 }
 
-.set-base-layout-max-width {
-  max-width: min(var(--base-layout-max-width), 100% - (var(--side-gap-padding) * 2));
+.eyebrow {
+  margin-block-end: var(--space-s);
+  color: var(--color-accent-200);
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-semi-bold);
+  line-height: var(--font-line-height);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
-.set-main-content-max-width {
-  max-width: var(--main-content-max-width);
+
+.set-site-max-width {
+  max-width: min(var(--site-max-width), 100% - (var(--side-gap-padding) * 2));
 }
+.set-content-max-width {
+  max-width: var(--content-max-width);
+}
+
+
+.margin-top-3xl { margin-top: var(--space-3xl) !important; }
+.margin-top-2xl { margin-top: var(--space-2xl) !important; }
+.margin-top-xl { margin-top: var(--space-xl) !important; }
+.margin-top-l { margin-top: var(--space-l) !important; }
+.margin-top-m { margin-top: var(--space-m) !important; }
+.margin-top-s { margin-top: var(--space-s) !important; }
+.margin-top-xs { margin-top: var(--space-xs) !important; }
+.margin-top-2xs { margin-top: var(--space-2xs) !important; }
+
+.margin-bottom-3xl { margin-bottom: var(--space-3xl) !important; }
+.margin-bottom-2xl { margin-bottom: var(--space-2xl) !important; }
+.margin-bottom-xl { margin-bottom: var(--space-xl) !important; }
+.margin-bottom-l { margin-bottom: var(--space-l) !important; }
+.margin-bottom-m { margin-bottom: var(--space-m) !important; }
+.margin-bottom-s { margin-bottom: var(--space-s) !important; }
+.margin-bottom-xs { margin-bottom: var(--space-xs) !important; }
+.margin-bottom-2xs { margin-bottom: var(--space-2xs) !important; }
+
+.margin-left-3xl { margin-left: var(--space-3xl) !important; }
+.margin-left-2xl { margin-left: var(--space-2xl) !important; }
+.margin-left-xl { margin-left: var(--space-xl) !important; }
+.margin-left-l { margin-left: var(--space-l) !important; }
+.margin-left-m { margin-left: var(--space-m) !important; }
+.margin-left-s { margin-left: var(--space-s) !important; }
+.margin-left-xs { margin-left: var(--space-xs) !important; }
+.margin-left-2xs { margin-left: var(--space-2xs) !important; }
+
+.margin-right-3xl { margin-right: var(--space-3xl) !important; }
+.margin-right-2xl { margin-right: var(--space-2xl) !important; }
+.margin-right-xl { margin-right: var(--space-xl) !important; }
+.margin-right-l { margin-right: var(--space-l) !important; }
+.margin-right-m { margin-right: var(--space-m) !important; }
+.margin-right-s { margin-right: var(--space-s) !important; }
+.margin-right-xs { margin-right: var(--space-xs) !important; }
+.margin-right-2xs { margin-right: var(--space-2xs) !important; }
+
+.margin-3xl { margin: var(--space-3xl) !important; }
+.margin-2xl { margin: var(--space-2xl) !important; }
+.margin-xl { margin: var(--space-xl) !important; }
+.margin-l { margin: var(--space-l) !important; }
+.margin-m { margin: var(--space-m) !important; }
+.margin-s { margin: var(--space-s) !important; }
+.margin-xs { margin: var(--space-xs) !important; }
+.margin-2xs { margin: var(--space-2xs) !important; }
+
+.padding-top-3xl { padding-top: var(--space-3xl) !important; }
+.padding-top-2xl { padding-top: var(--space-2xl) !important; }
+.padding-top-xl { padding-top: var(--space-xl) !important; }
+.padding-top-l { padding-top: var(--space-l) !important; }
+.padding-top-m { padding-top: var(--space-m) !important; }
+.padding-top-s { padding-top: var(--space-s) !important; }
+.padding-top-xs { padding-top: var(--space-xs) !important; }
+.padding-top-2xs { padding-top: var(--space-2xs) !important; }
+
+.padding-bottom-3xl { padding-bottom: var(--space-3xl) !important; }
+.padding-bottom-2xl { padding-bottom: var(--space-2xl) !important; }
+.padding-bottom-xl { padding-bottom: var(--space-xl) !important; }
+.padding-bottom-l { padding-bottom: var(--space-l) !important; }
+.padding-bottom-m { padding-bottom: var(--space-m) !important; }
+.padding-bottom-s { padding-bottom: var(--space-s) !important; }
+.padding-bottom-xs { padding-bottom: var(--space-xs) !important; }
+.padding-bottom-2xs { padding-bottom: var(--space-2xs) !important; }
+
+.padding-left-3xl { padding-left: var(--space-3xl) !important; }
+.padding-left-2xl { padding-left: var(--space-2xl) !important; }
+.padding-left-xl { padding-left: var(--space-xl) !important; }
+.padding-left-l { padding-left: var(--space-l) !important; }
+.padding-left-m { padding-left: var(--space-m) !important; }
+.padding-left-s { padding-left: var(--space-s) !important; }
+.padding-left-xs { padding-left: var(--space-xs) !important; }
+.padding-left-2xs { padding-left: var(--space-2xs) !important; }
+
+.padding-right-3xl { padding-right: var(--space-3xl) !important; }
+.padding-right-2xl { padding-right: var(--space-2xl) !important; }
+.padding-right-xl { padding-right: var(--space-xl) !important; }
+.padding-right-l { padding-right: var(--space-l) !important; }
+.padding-right-m { padding-right: var(--space-m) !important; }
+.padding-right-s { padding-right: var(--space-s) !important; }
+.padding-right-xs { padding-right: var(--space-xs) !important; }
+.padding-right-2xs { padding-right: var(--space-2xs) !important; }
+
+.padding-3xl { padding: var(--space-3xl) !important; }
+.padding-2xl { padding: var(--space-2xl) !important; }
+.padding-xl { padding: var(--space-xl) !important; }
+.padding-l { padding: var(--space-l) !important; }
+.padding-m { padding: var(--space-m) !important; }
+.padding-s { padding: var(--space-s) !important; }
+.padding-xs { padding: var(--space-xs) !important; }
+.padding-2xs { padding: var(--space-2xs) !important; }
 ```
 
-### Fill Height 10svh
+## Layout utilities
 
-```css
-.height-smart-fill-screen {
-    min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
-}
+`.base-layout` creates three grid columns: a flexible column on each side and a constrained column in the middle. The side columns centre the layout and never become smaller than `--side-gap-padding`. This keeps the middle column away from the edge of the screen on smaller viewports.
+
+Direct children go in the middle column, which uses `--site-max-width` by default.
+
+Add `.base-layout-content` to use the narrower `--content-max-width` instead:
+
+```html
+<main class="base-layout base-layout-content">
+    <h1>Page heading</h1>
+    <p>Regular page content...</p>
+</main>
 ```
 
-This class is used to vertically fill the viewport height, the screen that's actually shown to the user. [`100svh`](https://web.dev/blog/viewport-units) is the screen height between the top and bottom browser bars you might see on your phone, it will automatically adjust depending on whether the bars are shown or not.  
-Since additionally to the UI that every browser app has we also display a header and probably footer on our own page we also subtract these.
+`.full-width` moves a child from the middle column across all three columns of the current grid. You can use this to make a section background reach the edges while keeping its content narrow.
 
-I use this to make sure that my footer on pages with almost no content is still at the bottom so it looks consistent throughout the pages.
+`.height-smart-fill-screen` subtracts the site's header and footer heights from `100svh`. I use it to keep the footer at the bottom on short pages. Check the result on mobile: a footer with a different height needs the corresponding variable updated.
 
-You could also use this for a hero section, but make sure to reduce the height a bit so part of the next section gets shown to the user, you want to hook the user into starting to scroll on your page.
+## Flow
 
-### Flow
+`.flow` adds space between direct children. It uses `em`, so a larger heading naturally gets more space than a paragraph.
 
-```css
-.flow > *:not(:first-child){
-    margin-block-start: var(--flow-space); /*1em*/
-}
+## Accessibility
+
+`.visually-hidden` keeps content available to assistive technology while taking it out of the visible layout. It is useful for labels that are obvious visually but still need text, such as an icon-only button.
+
+## Flex, type and width helpers
+
+`.flex-center` creates the flex container. `.flex-column` and `.flex-row` only set `flex-direction`, so use them on an element that is already flex.
+
+`.eyebrow` is for the short label above a heading. It uses the small type and accent color already defined in `var.css`.
+
+The two max-width helpers only set the limit. Use `.margin-inline-auto` as well when the element should be centred.
+
+## Spacing utilities
+
+The spacing classes follow the variables from `2xs` through `3xl`. For example:
+
+```html
+<section class="padding-top-xl margin-bottom-2xl">
+    ...
+</section>
 ```
 
-Flow adds margin-top to all its direct children, which is great if you have something like a longer blog text that you want to make more readable. Because we use `em` the gaps become bigger for bigger elements and smaller for smaller elements, making the content flow much better.
+They use `!important` on purpose. A utility added directly to the HTML should win over the component's ordinary spacing. Use these for exceptions. Repeated layout belongs in the component CSS; otherwise the HTML becomes harder to scan.
 
-### Visually Hidden
-
-A very useful utility class to make things more accessibility friendly, especially for screen readers.[^1]
-
-### Margin-inline: auto
-
-```css
-.margin-inline-auto {
-    margin-inline: auto;
-}
-```
-
-The easiest way to center an element horizontally. Sets `margin-left` and `margin-right` to auto, thus both trying to take up space making the element land in the center.
-
-### Base Layout
-
-My favorite way to make a common layout with modern CSS. Allows us to easily center content, having breakout elements or creating asides. Kevin Powell talks about it in [his video on using container and wrapper classes](https://youtu.be/c13gpBrnGEw).
-
-
-### Side-gap-padding
-
-I like to use this to apply the padding I have defined earlier which is usually relevant for mobile views. For some pages I do not want to use the `.base-layout` class but I want to keep the same distance to the end of the screen on both sides.
-
-### Inverted-colors
-
-I use inverted-colors to invert colors. Just redefining the inverted colors through variables is enough for it to work. So depending on which colors I am using for my main design I apply the opposite colors here, useful to make the design look more visually interesting.
+The [spacing guide](/css/spacing) has more on choosing values.
 
 ---
 
 <details>
 
-<summary>Helpful Sources & References</summary>
+<summary>Helpful sources and references</summary>
 
-- Using grid to style layout by Kevin Powell from his 3 hour Astro blog course: https://youtu.be/Thudicbgqtg?t=2937
-- Possible approach to using container and wrapper classes by Kevin Powell: https://youtu.be/c13gpBrnGEw
+- Kevin Powell on grid layouts: https://youtu.be/Thudicbgqtg?t=2937
+- Kevin Powell on container and wrapper classes: https://youtu.be/c13gpBrnGEw
+- Kevin Powell on visually hidden content: https://youtu.be/fyuao3G-2qg?t=256
 
 </details>
-
-[^1]: `.visually-hidden` explained by Kevin Powell: https://youtu.be/fyuao3G-2qg?t=256

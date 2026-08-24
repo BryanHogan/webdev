@@ -1,0 +1,36 @@
+---
+title: CSS Setup
+description: How I split and load the shared CSS files in a project.
+---
+
+I split the shared CSS into separate files. Each file has one job, which makes it easier to maintain.
+
+The CSS files are loaded in the following order:
+
+1. [`reset.css`](/css/css-reset) removes unwanted browser defaults.
+2. [`var.css`](/css/variables) defines the design tokens and color themes.
+3. [`global.css`](/css/global-css) styles elements across the site.
+4. [`util.css`](/css/utility-classes) contains reusable classes.
+5. [`markdown.css`](/miscellaneous/styling-markdown) styles rendered Markdown content.
+
+The order matters. The reset runs first. The remaining files can then use the variables from `var.css`. The optional Markdown styles can then build on the global element styles.
+
+Component-specific styles stay with their components and load after these shared files.
+
+If a project does not need to render Markdown, it doesn't need the `markdown.css` file and import.
+
+## Astro Framework example
+
+In an Astro layout, the imports could look like this:
+
+```astro
+---
+import "../styles/reset.css";
+import "../styles/var.css";
+import "../styles/global.css";
+import "../styles/util.css";
+import "../styles/markdown.css";
+---
+```
+
+See the [`/src/styles` folder](https://github.com/BryanHogan/astro-starter-template/tree/master/src/styles) and [BaseLayout.astro component](https://github.com/BryanHogan/astro-starter-template/blob/master/src/layouts/BaseLayout.astro) of my Astro Starter Template for a live example.

@@ -1,58 +1,115 @@
 ---
-title: CSS Global
-description: How your Global.css could look like.
+title: Global CSS
+description: Site-wide element styles built on the shared variables and reset.
 ---
 
-wip
-
-- reference css reset
-- reference css variables
-- set base styling like for body, text, h1, h1 mobile, 
-- show example how to do light and dark mode -> make into own component explanation
-
-This will make use of our variables and be based on the reset.css as defined earlier.
+`global.css` is for element styles that should apply across the site. It comes after [`reset.css`](/css/css-reset) and [`var.css`](/css/variables), so it can use the variables without mixing design decisions into the reset.
 
 ```css
 :root {
-	font-size: var(--font-size-base);
+    font-size: 100%;
 }
 
 body {
-	color: var(--color-neutral-100);
-	background-color: var(--color-neutral-900);
-	font-family: var(--font-family);
-	line-height: var(--font-line-height);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--font-line-height);
+}
+
+[data-theme] {
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 code {
-	font-family: var(--font-mono);
+    font-family: var(--font-mono);
 }
 
-p, li, details, code, a, pre, img {
-	font-size: 1rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-	line-height: var(--font-line-height-heading);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: var(--font-line-height-heading);
+    font-weight: var(--font-weight-bold);
 }
 
 a {
-	color: var(--color-accent-100);
-}
-a:hover, a:focus-within {
-	color: var(--color-accent-500);
+    color: var(--color-link);
 }
 
-h1 {font-size: var(--text-size-4xl);}
-h2 {font-size: var(--text-size-3xl);}
-h3 {font-size: var(--text-size-2xl);}
-h4 {font-size: var(--text-size-xl);}
+a:hover,
+a:focus-within {
+    color: var(--color-link-hover);
+}
+
+a:active {
+    color: var(--color-link-active);
+}
+
+/* Visible keyboard-focus indicator for all interactive elements */
+:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+}
+
+small {
+    font-size: var(--font-size-s);
+    color: var(--color-text-muted);
+}
+
+h1 {
+    font-size: var(--font-size-4xl);
+}
+
+h2 {
+    font-size: var(--font-size-3xl);
+}
+
+h3 {
+    font-size: var(--font-size-2xl);
+}
+
+h4 {
+    font-size: var(--font-size-xl);
+}
+
+h5 {
+    font-size: var(--font-size-l);
+}
+
+h6 {
+    font-size: var(--font-size-base);
+}
 
 @media (min-width: 48rem) {
-    h1 {font-size: var(--text-size-5xl);}
-    h2 {font-size: var(--text-size-4xl);}
-    h3 {font-size: var(--text-size-3xl);}
-    h4 {font-size: var(--text-size-2xl);}
-}
+    h1 {
+        font-size: var(--font-size-5xl);
+    }
 
+    h2 {
+        font-size: var(--font-size-4xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-3xl);
+    }
+
+    h4 {
+        font-size: var(--font-size-2xl);
+    }
+}
 ```
+
+I set the root font size to `100%` so the browser default remains in control. The body uses `--font-size-base`, which can still be larger than the browser default.
+
+`[data-theme]` matters when a themed section sits inside the page. It applies that section's semantic text and background colors instead of relying on the body styles to inherit correctly.
+
+Links have separate default, hover and active tokens. `:focus-visible` gives keyboard users a clear focus indicator without showing it after every pointer click.
+
+Heading sizes start with the smaller screen values. The media query only changes the headings that need a larger desktop size.
+
+Styles for rendered Markdown are kept in the [Styling Markdown](/miscellaneous/styling-markdown) page. Layout and spacing helpers are in [CSS Utility Classes](/css/utility-classes).

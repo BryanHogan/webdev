@@ -1,6 +1,6 @@
 ---
-title: Rules On Spacing
-description: How to space elements.
+title: Rules on spacing
+description: How to choose and reuse spacing values.
 ---
 
 <div style="position: relative; width: 100%; padding-bottom: 56.25%; max-height: 500px;" class="not-content">
@@ -17,6 +17,32 @@ description: How to space elements.
     </iframe>
 </div>
 
-Except for the ad filled ending this guide by Chainlift is very helpful (don't rely on other proprietary tools for something you can easily do yourself).
+Except for the ad-filled ending, this guide by Chainlift is useful. You do not need a proprietary design tool to follow the rules.
 
-Define your spacing values like described in [CSS Variables](/css/variables). Then apply them like mentioned in the video.
+Define a small spacing scale in [`var.css`](/css/variables):
+
+```css
+--space-2xs: 0.375rem;
+--space-xs: 0.5rem;
+--space-s: 0.75rem;
+--space-m: 1.25rem;
+--space-l: 2rem;
+--space-xl: 3.25rem;
+--space-2xl: 5.25rem;
+--space-3xl: 8.5rem;
+```
+
+Items that belong together should use the smaller values. Separate sections and groups with the larger values. Reusing the same scale keeps spacing from turning into a collection of unrelated numbers.
+
+For one-off layout work, use the variables directly:
+
+```css
+.card {
+    padding: var(--space-m);
+    gap: var(--space-s);
+}
+```
+
+The [`util.css`](/css/utility-classes) file also contains margin and padding classes for every value in the scale. I use those when the spacing is genuinely a one-off adjustment. If the same combination appears several times, it probably belongs in the component CSS instead.
+
+For flowing text, `--flow-space: 1em` is useful because the gap follows the current font size. The `.flow` utility and `.markdown-container` both use this approach.

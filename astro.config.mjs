@@ -46,8 +46,10 @@ export default defineConfig({
 			{
 				label: "CSS 🎨",
 				items: [
+					{ label: "CSS Setup", link: "css/css-setup/"},
 					{ label: "CSS Reset", link: "css/css-reset/"},
 					{ label: "CSS Variables", link: "css/variables/"},
+					{ label: "Global CSS", link: "css/global-css/"},
 					{ label: "Utility Classes", link: "css/utility-classes/", badge: "new"},
 					{ label: "Spacing", link: "css/spacing/"}
 				],

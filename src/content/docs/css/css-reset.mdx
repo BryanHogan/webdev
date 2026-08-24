@@ -1,28 +1,31 @@
 ---
 title: CSS Reset
-description: How a CSS reset should look like.
+description: A small CSS reset I use at the start of a project.
 ---
 import { Tabs, TabItem } from '@astrojs/starlight/components';
 
-Do you need a reset.css file? What should yours look like?
+A reset removes browser styles that I would otherwise overwrite in every project. I keep it small. Useful browser defaults can stay.
+
+For the complete CSS styling file structure and load order, see [CSS Setup](/css/css-setup).
 
 ## Why use a reset.css
 
-Historically the main goal of a CSS reset was to ensure consistency between browsers. But in recent times the differences have drastically decreased and we might want to keep some styling like `font-style: italic` for `<em>` elements.
+Browsers add their own margins, list padding, form fonts and other default styles. Some of those defaults are useful, others aren't. So the CSS reset helps us reset those once at the start and make every browser behave and look the same.
 
-So nowadays I use a css reset to start from a blank slate, styles that would get applied to any project regardless of it's requirements.
+Older resets tried to make every browser render everything identically. Browser differences are smaller now, and removing every default creates more work. For example, I keep italic text on `<em>` and do not remove list markers from every list.
+
+The reset should only contain rules I want in every project. Colors, font sizes and component styling belong to [the other CSS files](/css/css-setup).
 
 ## CSS reset examples
 
-Different variations  of a reset.css:
+These two resets are useful references. Both are short enough to understand instead of copying blindly.
 
 <Tabs>
-<TabItem label="Josh W">
+<TabItem label="Josh W Comeau">
 
-This is the [`reset.css` Josh W Comeau uses](https://www.joshwcomeau.com/css/custom-css-reset/), included on his blog post are also explanations for his decisions.
+This is a shortened version of the [`reset.css` Josh W Comeau uses](https://www.joshwcomeau.com/css/custom-css-reset/):
 
 ```css
-// reset.css
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -57,52 +60,47 @@ p, h1, h2, h3, h4, h5, h6 {
 
 <TabItem label="Starlight">
 
-The [`reset.css` as used by the Starlight project](https://github.com/withastro/starlight/blob/main/packages/starlight/style/reset.css).
+Astro Starlight also has a small [`reset.css`](https://github.com/withastro/starlight/blob/main/packages/starlight/style/reset.css):
 
 ```css
-// reset.css
-
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-	margin: 0;
+  margin: 0;
 }
 
 html {
-	color-scheme: dark;
-	accent-color: var(--sl-color-accent);
+  color-scheme: dark;
+  accent-color: var(--sl-color-accent);
 }
 
 html[data-theme='light'] {
-	color-scheme: light;
+  color-scheme: light;
 }
 
 body {
-	-webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 input, button, textarea, select {
-	font: inherit;
+  font: inherit;
 }
 
 p, h1, h2, h3, h4, h5, h6, code {
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 ```
 
 </TabItem>
-
 </Tabs>
 
-## The CSS reset I use
+## The reset I use
 
 ```css
-// reset.css
-
 *,
 *::before,
 *::after {
@@ -111,14 +109,6 @@ p, h1, h2, h3, h4, h5, h6, code {
 
 * {
     margin: 0;
-}
-
-html {
-    color-scheme: dark;
-}
-
-html[data-theme='light'] {
-    color-scheme: light;
 }
 
 body {
@@ -164,31 +154,28 @@ ul[role="list"] {
         scroll-behavior: smooth;
     }
 }
-
 ```
 
-So this is my CSS reset.
+There are a few decisions worth knowing about:
 
-Explanations and the technical details on these are further explained on the sites I've linked to down below in the `Sources & References` part at the bottom of this page.
+- `box-sizing: border-box` makes declared widths include padding and borders.
+- Media gets `display: block` and cannot grow wider than its container.
+- Italic alt text styles alt text for when images fail to load.
+- Form controls inherit the surrounding font.
+- Paragraphs use `text-wrap: pretty` and large headings use `text-wrap: balance`.
+- A list only loses its marker when it has `role="list"`. This keeps the choice intentional in the HTML.
+- Anchor navigation accounts for the navbar. Smooth scrolling is only enabled when the user has not enabled reduced motion.
 
-There are some things I also usually use like some way to set the height to fill the screen like this:
-
-```css
-.s-full-height {
-    min-height: calc(100svh - var(--navbar-height) - var(--footer-height));
-}
-```
-
-A page with helpful utility classes like these is on the [CSS Utility Classes page](/css/utility-classes).
+The color scheme lives in [`var.css`](/css/variables), because it changes with the theme. Utility classes such as the `full-height` class is in [`util.css`](/css/utility-classes), because it is a reusable class rather than a reset.
 
 ---
 
 <details>
 
-<summary>Helpful Sources & References</summary>
+<summary>Helpful sources and references</summary>
 
-- CSS reset tips by Kevin Powell focussed on newer css features: https://youtu.be/eWmDW4zEXt4 & https://youtu.be/cCAtD_BAHNw
-- Blog post by Josh W Comeau on his CSS reset: https://www.joshwcomeau.com/css/custom-css-reset/
-- Blog post by Andy Bell on his CSS reset: https://piccalil.li/blog/a-more-modern-css-reset/
+- CSS reset tips by Kevin Powell: https://youtu.be/eWmDW4zEXt4 and https://youtu.be/cCAtD_BAHNw
+- Josh W Comeau's CSS reset: https://www.joshwcomeau.com/css/custom-css-reset/
+- Andy Bell's modern CSS reset: https://piccalil.li/blog/a-more-modern-css-reset/
 
 </details>
