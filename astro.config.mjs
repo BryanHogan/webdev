@@ -62,6 +62,12 @@ export default defineConfig({
 				],
 			},
 			{
+				label: "Frameworks 🖼️",
+				items: [
+					{ label: "Which web framework", link: "frameworks/which-framework" },
+				],
+			},
+			{
 				label: "Components 🧩",
 				items: [
 					{ label: "Components", link: "components/introduction/" },
