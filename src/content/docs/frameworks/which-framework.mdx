@@ -1,9 +1,76 @@
 ---
 title: Which framework to use? React vs Astro vs Svelte
-description: Which web framework should you use for what use-cases? Comparing React vs Astro vs Svelte.
-draft: true
+description: Which web framework should you use? Comparing front-end frameworks React vs Astro vs Svelte.
 ---
 
-Which framework should you use for what use-case?
+Which front-end framework should you use?
+
+## What is a framework?
+
+A web framework is a tool to help you write a website. They aim to reduce the overhead you usually have to do when building a website and bring useful features making your job easier.
+
+They can help you reduce repetition and build a better website faster, simplifying the process of creating the site.
+
+For example, most frameworks allow you to create components, e.g. a `Card`, you could then reuse this same component at multiple places throughout your webpage without having to repeat the code. This reduces repetition, makes the code easier to maintain and the UI more coherent.
+
+This page will focus on front-end frameworks, although there are also back-end frameworks for handling the back-end.
+
+> Styling libraries are also often called CSS frameworks or UI frameworks. They can usually be used within a front-end framework. Such styling libraries will be covered on another page.
+
+There are many of front-end frameworks many of which focus on different use-cases.
 
 ## Comparing React vs Astro vs Svelte
+
+There are many different kinds of front-end frameworks, [Svelte](https://svelte.dev/), [Astro](https://astro.build/), [React](https://react.dev/), [Vue](https://vuejs.org/), [Angular](https://angular.dev/), [Alpine.js](https://alpinejs.dev/), [SolidJS](https://www.solidjs.com/), [Preact](https://preactjs.com/) and [HTMX](https://htmx.org/) just to name a few.
+
+There are so many frameworks, so you might feel a bit overwhelmed and stuck in choice paralysis. I will focus on the following three as I think these frameworks are amazing (mostly), the trade-offs here are the clearest and they are what I have most experience with: Astro, Svelte and React.
+
+- **Astro**: Astro is a framework optimized for building fast content-driven websites. It brings no client-side JavaScript by default, making it very performant. It has support for content collections and can integrate almost all other frameworks.
+- **Svelte**: Svelte is a framework bringing all the usual stuff with a very simple and concise syntax and great performance.
+- **React**: React is a popular framework. Its syntax is not as nice as Svelte in my view. But it's used for a lot of projects nonetheless.
+
+What I like about Astro and Svelte is that the syntax is very close to HTML and CSS, so if you are a web developer you will feel comfortable using these quickly.
+
+### What makes Astro great
+
+Have you built a website using plain HTML and CSS? Then your experience with Astro will be very close to that, but with some valuable additions. You can use:
+
+- **Components**: Write an element once, then use it wherever you want without having to repeat yourself.
+- **Layout**: Want multiple pages to follow the same structure? Write a layout once, then use it wherever.
+- **Scoped styling**: Styling within a component or layout is scoped to just there, meaning it will only affect it, you don't have to worry about complex class names or accidentally affecting other elements.
+- **Content collections**: Content collections are a simple way to manage sets of content, e.g. blog posts, product descriptions, recipes and more. It's how these pages or my blog posts are written, they are just a collection of Markdown files.
+- **RSS and sitemap**: You can easily add a RSS feed and sitemap as well.
+
+If you need deeper reactivity, you can add another framework. This means you can mix Astro and Svelte, or whatever other framework you choose. Astro has a large number of integrations.
+
+*Astro is actually an app framework / metaframework. Metaframeworks bring additional things such a routing, server-side rendering, data fetching and more.*
+
+
+### What makes Svelte great
+
+So Svelte is one of these frameworks which brings more reactivity, it's focused more on sites that have more JS logic. It has a very positive image in the web dev community, probably because it's simple to use and just works well. It's simple and performs well.
+
+Relevant to mention here, there's Svelte and SvelteKit. Svelte is a component framework, like React or Vue, whereas SvelteKit is an app framework or metaframework.
+
+### React
+
+React is the biggest front-end framework. It's popular, so people are using it, and since people are using it, people continue to use it. It has some negatives compared to Svelte, but since it's used more you will also find more job openings that mention React. Although what makes frameworks such as Svelte and Astro great is that the syntax is more similar to HTML and CSS, React's syntax is more unique in a bad way in my opinion.
+
+So what's the reason to use React? Putting React on your resume is useful though, many existing projects will require you to work with React.
+
+React has a large ecosystem, but that's also partly because it was missing so many things, if compared to e.g. SvelteKit many of these things were brought by default and there was a clear path to use either Svelte or SvelteKit for what you need. It's used for large websites, but so are the other frameworks.
+
+There's also [Next.js](https://nextjs.org/) which is a metaframework like SvelteKit, but instead it's based on React. Like SvelteKit, Next.js brings routing, server-side rendering, data fetching and more.
+
+## What framework to choose
+
+Let's start with what to avoid, using the biggest and grandest tool that can do everything for solutions that could be lean instead. You want to avoid unnecessary dependencies.
+
+So for simple content-based pages, e.g. landing pages, personal blogs and similar I would choose [**Astro**](https://astro.build/). If you want to build a docs site (such as this webdev.bryanhogan.com site) I'd recommend [Astro Starlight](https://starlight.astro.build/), it's a theme built on top of the Astro framework. If you want a personal blog or other similar sites I highly recommend my [Astro Starter Template](https://starter.bryanhogan.com/) to get started, it's just an Astro project with some small additions using the clean web dev approaches described on this site.
+
+If you need additional logic / reactivity you can [add **Svelte** to your Astro project](https://docs.astro.build/en/guides/integrations-guide/svelte/), e.g. for online stores I find this to be a very good approach.
+
+If the whole page is a complex web app with lots of JavaScript then switching over to [**SvelteKit**](https://svelte.dev/docs/kit/introduction) might make sense.
+
+[^1]: I've been [building native applications](https://bryanhogan.com/blog/web-to-app-sveltekit-capacitor) using SvelteKit with a static build and [Capacitor](https://capacitorjs.com/).
+[^2]: There are multiple tools out there in addition to Capacitor now allowing you to turn web apps (HTML, CSS, JS) into native applications: [Tauri](https://v2.tauri.app/), [Electron](https://www.electronjs.org/), [Lynx](https://lynxjs.org/)
