@@ -70,9 +70,7 @@ export default defineConfig({
 			{
 				label: "Components 🧩",
 				items: [
-					{ label: "Components", link: "components/introduction/" },
-					{ label: "Accordion", link: "components/accordion/" },
-					{ label: "NavBar", link: "components/navbar/", badge: "new"},
+					{ label: "Components", link: "components/introduction/" }
 				],
 			},
 			{
