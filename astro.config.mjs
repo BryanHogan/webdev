@@ -2,10 +2,13 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 import sitemap from "@astrojs/sitemap";
+import { satteri } from '@astrojs/markdown-satteri';
+import peleDiagrams from './src/plugins/pele.mjs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://webdev.bryanhogan.com',
+	markdown: { processor: satteri({ mdastPlugins: [peleDiagrams] }) },
 	integrations: [starlight({
 		title: 'Web Dev',
 		logo: {

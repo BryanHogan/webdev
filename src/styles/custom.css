@@ -12,6 +12,7 @@
 	--sl-color-gray-6: #222533;
 	--sl-color-black: #16181e;
 }
+
 /* Light mode colors. */
 :root[data-theme='light'] {
 	--sl-color-accent-low: #C7C0E2;
@@ -26,4 +27,30 @@
 	--sl-color-gray-6: #ebeef5;
 	--sl-color-gray-7: #f5f6fa;
 	--sl-color-black: #ffffff;
+}
+
+/* Pele diagrams follow the active Starlight theme. */
+.pele {
+	--pele-bg: var(--sl-color-bg);
+	--pele-fg: var(--sl-color-text);
+	--pele-muted: var(--sl-color-gray-3);
+	--pele-line: var(--sl-color-gray-2);
+	--pele-surface: var(--sl-color-gray-6);
+	--pele-surface-alt: var(--sl-color-gray-5);
+	--pele-border: var(--sl-color-gray-3);
+	--pele-accent: var(--sl-color-accent);
+	--pele-critical: var(--sl-color-red);
+	--pele-error: var(--sl-color-red);
+	--pele-font: var(--sl-font-system);
+	--pele-font-mono: var(--sl-font-system-mono);
+	display: block;
+	margin-inline: auto;
+}
+
+.diagram {
+	overflow-x: auto;
+}
+
+.diagram > .pele {
+	max-width: none;
 }

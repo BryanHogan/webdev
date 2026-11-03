@@ -25,6 +25,9 @@ I keep the shared variables in `var.css`. It loads after the [CSS reset](/css/cs
 
 ## The variables I use
 
+<details>
+<summary>View the full variables.css file</summary>
+
 ```css
 :root {
     color-scheme: dark;
@@ -266,11 +269,31 @@ I keep the shared variables in `var.css`. It loads after the [CSS reset](/css/cs
 }
 ```
 
+</details>
+
 ## Palette colors and semantic colors
 
 The numbered colors are the palette. They say what a color is. The semantic variables say where it is used.
 
 For example, component CSS should usually use `--color-text`, `--color-surface` or `--color-border`. It should not need to know that the current text color is `--color-neutral-100`. This is what makes the light theme small, only the semantic variables need new values.
+
+Here is how the text color reaches the components. Only the active theme supplies the value of `--color-text`:
+
+```mermaid
+flowchart TD
+    accTitle: From palette colors to component text
+    accDescr: In the dark theme, color-text uses color-neutral-100. In the light theme, it uses color-neutral-900. Component CSS reads color-text through a single declaration, so body, card and navigation text all follow the active theme without their own rule.
+    Dark["Dark theme<br/>--color-neutral-100"] -->|when dark| Text["Semantic token<br/>--color-text"]
+    Light["Light theme<br/>--color-neutral-900"] -->|when light| Text
+    Text -->|used in component CSS| Usage["color: var(--color-text)"]
+    class Usage code
+    classDef code font-family:monospace
+    Usage --> Body["Body text"]
+    Usage --> Card["Card text"]
+    Usage --> Nav["Navigation text"]
+```
+
+Switching themes changes the palette color behind `--color-text`. Every component using `color: var(--color-text)` follows that change without needing its own theme-specific rule.
 
 `--color-surface` is declared twice in each theme. The plain color is a fallback. Browsers that support `color-mix()` use the following declaration.
 
