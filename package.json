@@ -12,9 +12,10 @@
   "dependencies": {
     "@astrojs/check": "^0.9.8",
     "@astrojs/sitemap": "^3.7.2",
-    "@astrojs/starlight": "^0.38.3",
-    "astro": "^6.1.5",
-    "sharp": "^0.32.5",
+    "@astrojs/starlight": "^0.42.8",
+    "astro": "^7.4.5",
+    "pele": "^1.13.0",
+    "sharp": "^0.35.5",
     "typescript": "^5.4.2"
   }
 }
